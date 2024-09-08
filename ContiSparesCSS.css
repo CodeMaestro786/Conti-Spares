@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #ff0202;
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+    h1 {
+        font-size: 36px; /* Adjust as needed */
+        font-family: 'Courier New', monospace; /* You can also use 'Georgia', 'Times New Roman', etc. */
+        font-weight: bold; /* Can use normal, bolder, lighter, or numeric values */
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        text-transform: uppercase; /* Options: lowercase, capitalize, none */
+        letter-spacing: 2px; /* Adjust to increase or decrease space between letters */
+        line-height: 1.5; /* Adjust for spacing between lines */
+        background-color: #f0f0f0; /* Change to your desired background color */
+        border: 2px solid #4CAF50; /* Add a border */
+        padding: 10px; /* Add space inside the border */
+        font-size: 6vw; /* Responsive font size based on the viewport width */
+
+    }
+    h2 {
+        font-size: 27px; /* Adjust as needed */
+        font-family: 'Courier New', monospace; /* You can also use 'Georgia', 'Times New Roman', etc. */
+        font-weight: bold; /* Can use normal, bolder, lighter, or numeric values */
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        text-transform: uppercase; /* Options: lowercase, capitalize, none */
+        letter-spacing: 2px; /* Adjust to increase or decrease space between letters */
+        line-height: 1.5; /* Adjust for spacing between lines */
+        background-color: #f0f0f0; /* Change to your desired background color */
+        border: 2px solid #4CAF50; /* Add a border */
+        padding: 10px; /* Add space inside the border */
+         /* Responsive font size based on the viewport width */
+
+    }
+
+
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    background-color: #f0f0f0; /* Change to your desired background color */
+    border: 2px solid #4CAF50; /* Add a border */
+}
+
+nav a {
+    color: #000000;
+    text-decoration: underline overline ;
+    text-decoration-style: double;
+    font-size: 18px;
+    font-family:'Times New Roman', Times, serif;
+
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.team-member img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.product {
+    border: 1px solid #ff0000;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+footer {
+    background: #000000;
+    color: #ff0000;
+    text-align: center;
+    padding: 10px;
+}
