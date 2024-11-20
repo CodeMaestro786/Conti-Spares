@@ -18,7 +18,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #333;
+  background-color: black;
   color: white;
 }
 
@@ -177,5 +177,23 @@ textarea {
 
   .brands-container img {
     width: 60px; /* Even smaller brand images */
+  }
+}
+
+.logo img {
+  width: 150px; /* Adjust this size as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .logo img {
+    width: 120px; /* Smaller logo for tablets and smaller devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 100px; /* Even smaller logo for phones */
   }
 }
