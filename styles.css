@@ -73,6 +73,7 @@ textarea {
 .reviews-container {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap; /* Ensures responsiveness */
 }
 
 /* Brands */
@@ -89,7 +90,6 @@ textarea {
   display: inline-block; /* Keeps images inline */
 }
 
-
 /* Footer */
 .footer {
   text-align: center;
@@ -101,4 +101,81 @@ textarea {
 .footer .social-icons a {
   margin: 0 10px;
   color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  /* Adjust header */
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Adjust hero section */
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .hero-image img {
+    width: 100%; /* Full width on smaller screens */
+    height: auto;
+  }
+
+  .form-row {
+    flex-direction: column; /* Stack fields vertically */
+  }
+
+  /* Adjust reviews */
+  .reviews-container {
+    flex-direction: column;
+  }
+
+  /* Adjust brands section */
+  .brands-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center brand images */
+  }
+
+  .brands-container img {
+    width: 80px; /* Smaller image size for phones */
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  .header {
+    padding: 5px 10px;
+  }
+
+  .header li {
+    margin: 5px 0;
+  }
+
+  .hero {
+    padding: 10px;
+  }
+
+  .hero-form input, 
+  .hero-form textarea, 
+  .hero-form button {
+    width: 100%; /* Full width for form fields */
+  }
+
+  .brands-container img {
+    width: 60px; /* Even smaller brand images */
+  }
 }
