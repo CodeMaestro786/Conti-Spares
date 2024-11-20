@@ -1,144 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conti Spares</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ContiSpares - Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
-    <header>
-        <h1>Welcome to Conti Spares!</h1>
-        <h2>Used Car Spares at Unbeatable Prices</h2>
-        <nav>
-            <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#team">Meet Our Team</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#featured-products">Featured</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We provide used car spares at unbeatable prices! At Conti Spares, we specialize in providing a wide range of used car spares to meet all your automotive needs. Whether you're restoring a classic or maintaining your daily driver, we have everything from engines and transmissions to body parts and accessories. Our expert team is dedicated to offering top-notch products at competitive prices, ensuring you get the best value for your money. With a commitment to exceptional customer service and a passion for automobiles, we’re here to help keep you on the road!</p>
-    </section>
-
-    <section id="team">
-        <h2>Meet Our Team</h2>
-        <div class="team-member">
-            <img src="shaun.jpg" alt="Shaun">
-            <div>
-                <h3>Shawn Kishunlal</h3>
-                <p><strong>Position:</strong> Mechanic</p>
-                <p><strong>Background:</strong> Shawn brings over 10 years of experience in the automotive industry. He is known for his exceptional troubleshooting skills and attention to detail, which greatly contribute to our team's success. His expertise ensures that every vehicle part is in top-notch condition, keeping our clients safe on the road.</p>
-                <p><strong>Interesting Fact:</strong> Shawn once tried to fix his own car using only a YouTube tutorial and a rubber chicken!</p>
-                <p><strong>Contact: 076 780 2386</strong></p>
-            </div>
-        </div>
-
-       <div class="team-member">
-    
-    <a href="//imgur.com/a/7mvOf9E"></a> 
-
-    <div>
-        <h3>Riaz Rasool</h3>
-        <p><strong>Position:</strong> Salesman</p>
-        <p><strong>Background:</strong> With over 20 years of experience in sales, Riaz is our go-to expert for closing deals and building relationships. His innovative ideas always keep us on our toes!</p>
-        <p><strong>Interesting Fact:</strong> Riaz once tried to sell ice to penguins—and they almost bought it!</p>
-        <p><strong>Contact: 082 815 1732</strong></p>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="logo">
+      <img src="https://i.ibb.co/DgLP5Fq/logo.png" alt="ContiSpares Logo">
     </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Welcome to ContiSpares</h1>
+      <p>Your trusted shop for new and second-hand car spares.</p>
+      <form class="hero-form" id="contactForm">
+  <div class="form-row">
+    <input type="text" name="firstname" id="firstName" placeholder="First Name" required>
+    <input type="text" name="lastname" id="surname" placeholder="Surname" required>
+  </div>
+  <div class="form-row">
+    <input type="tel" name="phone" id="phoneNumber" placeholder="Cell Number" required>
+    <input type="email" name="email" id="email" placeholder="Email" required>
+  </div>
+  <div class="form-row">
+    <input type="text" name="vehicle" id="vehicleMakeModel" placeholder="Vehicle Make, Model" required>
+    <input type="text" name="year" id="carYear" placeholder="Car Year" required>
+  </div>
+  <textarea name="parts" id="vehiclePart" placeholder="Parts Required" rows="3" required></textarea>
+  <!-- Add id="submitForm" to the submit button -->
+  <button type="submit" id="submitForm">Send</button>
+</form>
+
+    </div>
+    <div class="hero-image">
+      <img src="https://via.placeholder.com/600x400" alt="Car Engine">
+    </div>
+  </section>
+
+  <!-- Customer Reviews -->
+  <section class="reviews" id="reviews">
+    <h2>What Our Customers Say</h2>
+    <div class="reviews-container">
+      <div class="review">
+        <p>“Amazing service and great prices!”</p>
+        <span>— Humaira Hoosen</span>
+      </div>
+      <div class="review">
+        <p>“Quick delivery and helpful staff!”</p>
+        <span>— Nashil Devraj Reddy</span>
+      </div>
+      <div class="review">
+        <p>“Highly recommended for car spares!”</p>
+        <span>— Sarah Lee</span>
+      </div>
+    </div>
+  </section>
+
+<!-- Featured Brands -->
+<section class="brands">
+  <h2>Our Main Brands</h2>
+  <div class="brands-container">
+    <img src="https://i.ibb.co/37vH32X/toyota.jpg" alt="Brand 1">
+    <img src="https://i.ibb.co/4Nrv069/renault.jpg" alt="Brand 2">
+    <img src="https://i.ibb.co/mtQP1jT/opel.jpg" alt="Brand 3">
+    <img src="https://i.ibb.co/MRpQKm5/nissan.jpg" alt="Brand 4">
+    <img src="https://i.ibb.co/Vwm7m5d/mitsubishi.jpg" alt="Brand 5">
+    <img src="https://i.ibb.co/R2LVzc2/merced-benz.jpg" alt="Brand 6">
+    <img src="https://i.ibb.co/1GxNKZD/hyundai.png" alt="Brand 7">
+    <img src="https://i.ibb.co/ngJP44Q/Honda.jpg" alt="Brand 8">
+    <img src="https://i.ibb.co/mJr1kby/gwm.jpg" alt="Brand 9">
+    <img src="https://i.ibb.co/F3Bj6Q3/datsun.jpg" alt="Brand 10">
+    <img src="https://i.ibb.co/DwM4SDk/chev.jpg" alt="Brand 11">
+    <img src="https://i.ibb.co/qBMbzRQ/BMW.png" alt="Brand 12">
+  </div>
+</section>
+
+
+  <!-- Footer Section -->
+  <footer class="footer" id="contact">
+    <h2>Contact Us</h2>
+    <p>We'd love to hear from you! Follow us on social media or send us a message.</p>
+    <div class="social-icons">
+  <a href="https://www.facebook.com/profile.php?id=61565620319486" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+ <a href="https://www.instagram.com/conti.spares/" target="_blank" rel="noopener noreferrer">
+   <i class="fab fa-instagram"></i>
+   </a>
+   <a href="https://wa.me/27642152212" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 </div>
 
-        </div>
-    </section>
-
-    <section id="products">
-        <h2>Our Products</h2>
-        <h3>Product Categories</h3>
-        <ul>
-            <li><a href="#engines">Engines</a></li>
-            <li><a href="#transmissions">Transmissions</a></li>
-            <li><a href="#brakes">Brakes & Suspension</a></li>
-            <li><a href="#lighting">Lighting</a></li>
-            <li><a href="#accessories">Accessories</a></li>
-        </ul>
-        <p>Coming soon! Stay tuned for updates on our product offerings.</p>
-    </section>
-
-    <section id="featured-products">
-        <h2>Featured Products</h2>
-        <div class="product">
-            <img src="product1.jpg" alt="Product Name">
-            <h3>Product Name</h3>
-            <p>Short description of the product.</p>
-            <span>Price: R</span>
-            <button>Add to Cart</button>
-        </div>
-        <!-- Repeat for other products -->
-    </section>
-
-    <section id="testimonials">
-        <h2>What Our Customers Say</h2>
-        <blockquote>
-            <p>"Great service and quality parts! Highly recommend!”</p>
-            <cite>- Jane Doe</cite>
-        </blockquote>
-        <blockquote>
-            <p>"Excellent customer support."</p>
-            <cite>- John Smith</cite>
-        </blockquote>
-    </section>
-
-    <section id="faq">
-        <h2>Frequently Asked Questions</h2>
-        <h3>What is your return policy?</h3>
-        <p>At Conti Spares, we specialize in providing a wide range of used car parts to cater to your automotive needs. 
-            Because our inventory consists of pre-owned items, we do not accept returns. 
-            We encourage our customers to carefully review part descriptions and compatibility before making a purchase.
-             Our experienced team is always available to assist you in selecting the right components for your vehicle. 
-             By ensuring that you choose the right parts initially, we aim to deliver a seamless and satisfactory purchasing experience. 
-            Thank you for understanding our policy!</p>
-        <h3>How do I know if a part is compatible with my vehicle?</h3>
-        <p>We provide detailed descriptions and specifications for each part listed on our website. 
-            If you're unsure about compatibility, our knowledgeable staff is here to help. 
-            You can contact us with your vehicle’s make, model, and year, and we’ll assist you in ensuring the part fits your needs. 
-            Additionally, we recommend checking your vehicle's manual for specific part numbers to verify compatibility.</p>
-    </section>
-
-    <section id="newsletter">
-        <h2>Stay Updated</h2>
-        <p>Sign up for our newsletter to receive the latest news and exclusive offers!</p>
-        <input type="email" placeholder="Your Email" required>
-        <button type="submit">Subscribe</button>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form id="contact-form" onsubmit="return validateForm();">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="text" id="mobile" placeholder="Your Mobile" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Conti Spares. All Rights Reserved.</p>
-        <div>
-            <a href="facebook-link">Facebook</a>
-            <a href="instagram-link">Instagram</a>
-            <a href="twitter-link">Twitter</a>
-        </div>
-    </footer>
-
-    <script src="ContiSparesScript.js"></script>
+  </footer>
+  
 
 </body>
 </html>
