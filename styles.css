@@ -37,28 +37,53 @@ body {
   color: white;
 }
 
+.logo img {
+  width: 150px; /* Default size for large screens */
+  height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 120px; /* Smaller size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 100px; /* Even smaller size for mobile */
+  }
+}
+
 /* Hero Section */
 .hero {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   padding: 20px;
   background: #eee;
+  text-align: center;
 }
 
 .hero-content {
-  max-width: 50%;
+  flex: 1;
+  max-width: 600px;
+  margin-bottom: 20px;
 }
 
-.hero-form {
-  display: flex;
-  flex-direction: column;
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-row {
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
+  flex-wrap: wrap; /* Ensures form fields wrap on smaller screens */
 }
 
 textarea {
@@ -69,114 +94,71 @@ textarea {
 .about {
   padding: 40px 20px;
   background-color: #f9f9f9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  text-align: center;
 }
 
 .about-container {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  max-width: 1200px;
   align-items: center;
   justify-content: space-between;
-}
-
-.about-text {
-  flex: 1;
-  max-width: 600px;
-}
-
-.about-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.about-text h3 {
-  font-size: 1.8rem;
-  margin: 20px 0 10px;
-  color: #555;
-}
-
-.about-text p {
-  margin-bottom: 10px;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #666;
-}
-
-.about-text ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 20px;
-}
-
-.about-text ul li {
-  font-size: 1rem;
-  margin: 10px 0;
-  line-height: 1.6;
-}
-
-.about-text ul li strong {
-  color: #333;
-}
-
-.about-image {
-  flex: 1;
-  max-width: 400px;
-  text-align: center;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .about-image img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 400px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-text {
-    max-width: 100%;
-  }
-
-  .about-image {
-    margin-top: 20px;
-  }
-}
-
-/* Reviews */
+/* Reviews Section */
 .reviews {
   padding: 20px;
   background-color: #fff;
+  text-align: center;
 }
 
 .reviews-container {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap; /* Ensures responsiveness */
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* Brands */
+/* Brands Section */
 .brands {
   background-color: #f5f5f5;
   padding: 20px;
+  text-align: center;
+}
+
+.brands-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .brands-container img {
-  width: 100px;
-  height: 50px;
-  object-fit: contain; /* Ensures proper scaling without distortion */
-  margin: 10px; /* Optional: Adds spacing between images */
-  display: inline-block; /* Keeps images inline */
+  width: 80px; /* Default size for large screens */
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .brands-container img {
+    width: 60px; /* Smaller size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .brands-container img {
+    width: 50px; /* Smaller size for mobile */
+  }
 }
 
 /* Footer */
@@ -190,99 +172,4 @@ textarea {
 .footer .social-icons a {
   margin: 0 10px;
   color: white;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  /* Adjust header */
-  .header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .header ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  /* Adjust hero section */
-  .hero {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero-content {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .hero-image img {
-    width: 100%; /* Full width on smaller screens */
-    height: auto;
-  }
-
-  .form-row {
-    flex-direction: column; /* Stack fields vertically */
-  }
-
-  /* Adjust reviews */
-  .reviews-container {
-    flex-direction: column;
-  }
-
-  /* Adjust brands section */
-  .brands-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center brand images */
-  }
-
-  .brands-container img {
-    width: 80px; /* Smaller image size for phones */
-    height: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Further adjustments for very small screens */
-  .header {
-    padding: 5px 10px;
-  }
-
-  .header li {
-    margin: 5px 0;
-  }
-
-  .hero {
-    padding: 10px;
-  }
-
-  .hero-form input, 
-  .hero-form textarea, 
-  .hero-form button {
-    width: 100%; /* Full width for form fields */
-  }
-
-  .brands-container img {
-    width: 60px; /* Even smaller brand images */
-  }
-}
-
-.logo img {
-  width: 150px; /* Adjust this size as needed */
-  height: auto; /* Maintain aspect ratio */
-}
-
-/* Responsive adjustment */
-@media (max-width: 768px) {
-  .logo img {
-    width: 120px; /* Smaller logo for tablets and smaller devices */
-  }
-}
-
-@media (max-width: 480px) {
-  .logo img {
-    width: 100px; /* Even smaller logo for phones */
-  }
 }
