@@ -65,6 +65,94 @@ textarea {
   margin-bottom: 10px;
 }
 
+/* About Section */
+.about {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.about-text h3 {
+  font-size: 1.8rem;
+  margin: 20px 0 10px;
+  color: #555;
+}
+
+.about-text p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.about-text ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.about-text ul li {
+  font-size: 1rem;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.about-text ul li strong {
+  color: #333;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-image {
+    margin-top: 20px;
+  }
+}
+
 /* Reviews */
 .reviews {
   padding: 20px;
