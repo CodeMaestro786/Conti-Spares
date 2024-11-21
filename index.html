@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +5,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
   <!-- Header Section -->
   <header class="header">
@@ -16,7 +15,8 @@
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#about" aria-label="Navigate to About Section">About</a>
+        </li>
         <li><a href="#products">Products</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -29,145 +29,170 @@
       <h1>Welcome to ContiSpares</h1>
       <p>Your trusted shop for new and second-hand car spares.</p>
       <form class="hero-form" id="contactForm">
-  <div class="form-row">
-    <input type="text" name="firstname" id="firstName" placeholder="First Name" required>
-    <input type="text" name="lastname" id="surname" placeholder="Surname" required>
-  </div>
-  <div class="form-row">
-    <input type="tel" name="phone" id="phoneNumber" placeholder="Cell Number" required>
-    <input type="email" name="email" id="email" placeholder="Email" required>
-  </div>
-  <div class="form-row">
-    <input type="text" name="vehicle" id="vehicleMakeModel" placeholder="Vehicle Make, Model" required>
-    <input type="text" name="year" id="carYear" placeholder="Car Year" required>
-  </div>
-  <textarea name="parts" id="vehiclePart" placeholder="Parts Required" rows="3" required></textarea>
-  <!-- Add id="submitForm" to the submit button -->
-  <button type="submit" id="submitForm">Send</button>
-</form>
+        <div class="form-row">
+          <input type="text" name="firstname" id="firstName" placeholder="First Name" required>
+          <input type="text" name="lastname" id="surname" placeholder="Surname" required>
+        </div>
+        <div class="form-row">
+          <input type="tel" name="phone" id="phoneNumber" placeholder="Cell Number" required>
+          <input type="email" name="email" id="email" placeholder="Email" required>
+        </div>
+        <div class="form-row">
+          <input type="text" name="vehicle" id="vehicleMakeModel" placeholder="Vehicle Make, Model" required>
+          <input type="text" name="year" id="carYear" placeholder="Car Year" required>
+        </div>
+        <textarea name="parts" id="vehiclePart" placeholder="Parts Required" rows="3" required></textarea>
+        <!-- Add id="submitForm" to the submit button -->
+        <button type="submit" id="submitForm">Send</button>
+      </form>
 
     </div>
     <div class="hero-image">
-      <img src=https://i.ibb.co/VTGsGPP/600x200-600x400.jpg/600x400" alt="Car Engine">
+      <img src="https://i.ibb.co/VTGsGPP/600x200-600x400.jpg/600x400" alt="Car Engine">
     </div>
   </section>
 
   <!-- About Section -->
-<section class="about" id="about">
-  <div class="about-container">
-    <div class="about-text">
-      <h2>About Us</h2>
-      <p>
-        Welcome to <strong>ContiSpares</strong>, your trusted partner for quality automotive spares.
-      </p>
-      <p>
-        We specialize in providing a comprehensive range of <strong>new and second-hand car parts</strong> to meet the needs of car enthusiasts, repair specialists, and everyday drivers. With years of experience in the automotive industry, we pride ourselves on delivering exceptional service and unmatched quality in every part we supply.
-      </p>
-      <h3>Why Choose ContiSpares?</h3>
-      <ul>
-        <li>✅ <strong>Wide Selection:</strong> Whether you're looking for rare, hard-to-find spares or common parts, we’ve got you covered.</li>
-        <li>✅ <strong>Affordable Pricing:</strong> Premium spares at competitive prices for all budgets.</li>
-        <li>✅ <strong>Expert Assistance:</strong> Our team is here to help you find exactly what you need for your vehicle.</li>
-      </ul>
-      <h3>Our Mission</h3>
-      <p>
-        At <strong>ContiSpares</strong>, we aim to revolutionize how people source car parts by offering a seamless shopping experience. Our mission is to build lasting relationships by ensuring every interaction is smooth, efficient, and reliable.
-      </p>
-      <h3>Sustainability Commitment</h3>
-      <p>
-        By providing high-quality second-hand parts, we help reduce automotive waste and contribute to a sustainable future.
-      </p>
+  <section class="about" id="about">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>
+          Welcome to <strong>ContiSpares</strong>, your trusted partner for quality automotive spares.
+        </p>
+        <p>
+          We specialize in providing a comprehensive range of <strong>new and second-hand car parts</strong> to meet the needs of car enthusiasts, repair specialists, and everyday drivers. With years of experience in the automotive industry, we pride ourselves on delivering exceptional service and unmatched quality in every part we supply.
+        </p>
+        <h3>Why Choose ContiSpares?</h3>
+        <ul>
+          <li>✅ <strong>Wide Selection:</strong> Whether you're looking for rare, hard-to-find spares or common parts, we’ve got you covered.</li>
+          <li>✅ <strong>Affordable Pricing:</strong> Premium spares at competitive prices for all budgets.</li>
+          <li>✅ <strong>Expert Assistance:</strong> Our team is here to help you find exactly what you need for your vehicle.</li>
+        </ul>
+        <h3>Our Mission</h3>
+        <p>
+          At <strong>ContiSpares</strong>, we aim to revolutionize how people source car parts by offering a seamless shopping experience. Our mission is to build lasting relationships by ensuring every interaction is smooth, efficient, and reliable.
+        </p>
+        <h3>Sustainability Commitment</h3>
+        <p>
+          By providing high-quality second-hand parts, we help reduce automotive waste and contribute to a sustainable future.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="https://i.ibb.co/p404HLV/employees.jpg" alt="About ContiSpares">
+      </div>
     </div>
-    <div class="about-image">
-      <img src="https://i.ibb.co/p404HLV/employees.jpg" alt="About ContiSpares">
-    </div>
-  </div>
-</section>
+  </section>
 
- <!-- Products Section -->
-<section class="products" id="products">
-  <h2>Our Products</h2>
-  <p>Browse through our range of vehicles available for parts or full sale.</p>
-  <div class="products-container">
-    <!-- Example Product Card -->
-<div class="product-card">
-      <img src="https://i.ibb.co/r5QKTL2/IMG-20241120-WA0046.jpg"" alt="Datsun Go">
-      <h3>Datsun Go</h3>
-      <p><strong>Status:</strong> Runner, Selling complete</p>
+  <!-- Products Section -->
+  <section class="products" id="products">
+    <h2>Our Products</h2>
+    <p>Browse through our range of vehicles available for parts or full sale.</p>
+    <div class="products-container">
+      <div class="filter-options">
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for products">
+        <button onclick="searchProducts()">Search</button>
+      </div>
+      </div>
+      <div class="sort-options">
+        <select id="sortSelect" onchange="sortProducts()">
+          <option value="alphabetical">Sort by Name</option>
+          <option value="status">Sort by Status</option>
+        </select>
+      </div>
+      </div>
+      <!-- Example Product Card -->
+      <div class="product-card">
+        <img src="https://i.ibb.co/r5QKTL2/IMG-20241120-WA0046.jpg" alt=" Datsun Go">
+        <h3>Datsun Go</h3>
+        <p><strong>Status:</strong> Runner, Selling complete</p>
+      </div>
+      <div class="product-card">
+        <img src="https://i.ibb.co/2SwjQ3x/IMG-20241120-WA0044.jpg" alt="Hyundai i10">
+        <h3>Hyundai i10</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+
+      <div class="product-card">
+        <img src="https://i.ibb.co/MMKCv8H/climber.jpg" alt="Renault Climber">
+        <h3>Renault Climber</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+      <div class="product-card">
+        <img src="https://i.ibb.co/KyZRvFP/IMG-20241120-WA0047.jpg" alt="Datsun Go">
+        <h3>Datsun Go</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+      <div class="product-card" onclick="showProductDetails('Detailed info about Datsun Go', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
+  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
+)">
+        <img src="https://i.ibb.co/Sm0v0q6/IMG-20241120-WA0048.jpg" alt="Datsun Go">
+        <h3>Datsun Go</h3>
+        <p>Status: Stripping for parts</p>
+      </div>
+      <div class="product-card">
+        <img src="https://i.ibb.co/jTfQn5N/IMG-20241120-WA0049.jpg" alt="Renault Kwid">
+        <h3>Renault Kwid</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200" alt="Honda Civic">
+        <h3>Honda Civic Sedan</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+      <div class="product-card">
+        <img src="https://i.ibb.co/3cs9n98/oldi10.jpg" alt="Hyundai i10">
+        <h3>Hyundai i10</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200" alt="Opel Corsa">
+        <h3>Opel Corsa</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+      <div class="product-card">
+        <img src="https://i.ibb.co/KqWZ4Bj/datsungo1.jpg" alt="Datsun Go">
+        <h3>Datsun Go</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+      <div class="product-card">
+        <img src="https://i.ibb.co/sqgWd4w/mercedes-B180.jpg" alt="Mercedes-Benz B180">
+        <h3>Mercedes-Benz B180</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+      <div class="product-card">
+        <img src="https://i.ibb.co/StVn39J/almera.jpg" alt="Nissan Almera">
+        <h3>Nissan Almera</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+      <div class="product-card">
+        <img src="https://i.ibb.co/SfpqztB/cruze.jpg" alt="Chevrolet Cruze">
+        <h3>Chevrolet Cruze</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+      <div class="product-card">
+        <img src="https://i.ibb.co/9qVxsNK/focus-st-3.jpg" alt="Ford Focus ST">
+        <h3>Ford Focus ST</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+      <div class="product-card">
+        <img src="https://i.ibb.co/58jc6wP/BMW320-I-4.jpg" alt="BMW 320i">
+        <h3>BMW 320i</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+      <div id="productModal" class="modal">
+        <div class="modal-content">
+          <span class="close-button" onclick="closeModal()">&times;</span>
+          <div id="modalDetails"></div>
+        </div>
+      </div>
+    </div
+</div>
+      <div id="pagination" class="pagination">
+
     </div>
- <div class="product-card">
-      <img src="https://i.ibb.co/2SwjQ3x/IMG-20241120-WA0044.jpg" alt="Hyundai i10">
-      <h3>Hyundai i10</h3>
-      <p><strong>Status:</strong> Stripping for parts</p>
-    </div>
- 
- <div class="product-card">
-      <img src="https://i.ibb.co/MMKCv8H/climber.jpg" alt="Renault Climber">
-      <h3>Renault Climber</h3>
-      <p><strong>Status:</strong> Stripping for parts</p>
-    </div>
-<div class="product-card">
-      <img src="https://i.ibb.co/KyZRvFP/IMG-20241120-WA0047.jpg" alt="Datsun Go">
-      <h3>Datsun Go</h3>
-      <p><strong>Status:</strong> Stripping for parts</p>
-    </div>
-<div class="product-card">
-      <img src="https://i.ibb.co/Sm0v0q6/IMG-20241120-WA0048.jpg" alt="Datsun Go">
-      <h3>Datsun Go</h3>
-      <p><strong>Status:</strong> Stripping for parts</p>
-    </div>
-<div class="product-card">
-      <img src="https://i.ibb.co/jTfQn5N/IMG-20241120-WA0049.jpg" alt="Renault Kwid">
-      <h3>Renault Kwid</h3>
-      <p><strong>Status:</strong> Stripping for parts</p>
-    </div>
-<div class="product-card">
-      <img src="https://via.placeholder.com/300x200" alt="Honda Civic">
-      <h3>Honda Civic Sedan</h3>
-      <p><strong>Status:</strong> Stripping for parts</p>
-    </div>
- <div class="product-card">
-      <img src="https://via.placeholder.com/300x200" alt="Hyundai i10">
-      <h3>Hyundai i10</h3>
-      <p><strong>Status:</strong> Stripping for parts</p>
-    </div>
-<div class="product-card">
-      <img src="https://via.placeholder.com/300x200" alt="Opel Corsa">
-      <h3>Opel Corsa</h3>
-      <p><strong>Status:</strong> Stripping for parts</p>
-    </div>
-<div class="product-card">
-      <img src="https://i.ibb.co/KqWZ4Bj/datsungo1.jpg" alt="Datsun Go">
-      <h3>Datsun Go</h3>
-      <p><strong>Status:</strong> Stripping for parts</p>
-    </div>
-<div class="product-card">
-      <img src="https://i.ibb.co/sqgWd4w/mercedes-B180.jpg" alt="Mercedes-Benz B180">
-      <h3>Mercedes-Benz B180</h3>
-      <p><strong>Status:</strong> Stripping for parts</p>
-    </div>
-<div class="product-card">
-      <img src="https://i.ibb.co/StVn39J/almera.jpg" alt="Nissan Almera">
-      <h3>Nissan Almera</h3>
-      <p><strong>Status:</strong> Stripping for parts</p>
-    </div>
-<div class="product-card">
-      <img src="https://i.ibb.co/SfpqztB/cruze.jpg" alt="Chevrolet Cruze">
-      <h3>Chevrolet Cruze</h3>
-      <p><strong>Status:</strong> Stripping for parts</p>
-    </div>
-<div class="product-card">
-      <img src="https://i.ibb.co/9qVxsNK/focus-st-3.jpg" alt="Ford Focus ST">
-      <h3>Ford Focus ST</h3>
-      <p><strong>Status:</strong> Stripping for parts</p>
-    </div>    
-<div class="product-card">
-      <img src="https://i.ibb.co/58jc6wP/BMW320-I-4.jpg" alt="BMW 320i">
-      <h3>BMW 320i</h3>
-      <p><strong>Status:</strong> Stripping for parts</p>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Customer Reviews -->
   <section class="reviews" id="reviews">
@@ -183,88 +208,189 @@
       </div>
       <div class="review">
         <p>“Highly recommended for car spares!”</p>
-        <span>— Sarah Lee</span>
+        <span>— Nokukhanya</span>
+      </div>
+     <div class="review">
+        <p>“Professional and effective service and staff!”</p>
+        <span>— Tristan-Jason Oschmann</span>
       </div>
     </div>
   </section>
 
-<!-- Featured Brands -->
-<section class="brands">
-  <h2>Our Main Brands</h2>
-  <div class="brands-container">
-    <img src="https://i.ibb.co/37vH32X/toyota.jpg" alt="Brand 1">
-    <img src="https://i.ibb.co/4Nrv069/renault.jpg" alt="Brand 2">
-    <img src="https://i.ibb.co/mtQP1jT/opel.jpg" alt="Brand 3">
-    <img src="https://i.ibb.co/MRpQKm5/nissan.jpg" alt="Brand 4">
-    <img src="https://i.ibb.co/Vwm7m5d/mitsubishi.jpg" alt="Brand 5">
-    <img src="https://i.ibb.co/R2LVzc2/merced-benz.jpg" alt="Brand 6">
-    <img src="https://i.ibb.co/1GxNKZD/hyundai.png" alt="Brand 7">
-    <img src="https://i.ibb.co/ngJP44Q/Honda.jpg" alt="Brand 8">
-    <img src="https://i.ibb.co/mJr1kby/gwm.jpg" alt="Brand 9">
-    <img src="https://i.ibb.co/F3Bj6Q3/datsun.jpg" alt="Brand 10">
-    <img src="https://i.ibb.co/DwM4SDk/chev.jpg" alt="Brand 11">
-    <img src="https://i.ibb.co/qBMbzRQ/BMW.png" alt="Brand 12">
-    <img src="https://i.ibb.co/chsfWwT/ford.jpg" alt="Brand 13">
-    <img src="https://i.ibb.co/fNgyq4C/vw.png" alt="Brand 14">                                       <img src="https://i.ibb.co/dGpKTzz/porsche.png" alt="Brand 15">
-    <img src="https://i.ibb.co/XVVZDSs/audi.png" alt="Brand 16">
-    <img src="https://i.ibb.co/PQH9f2B/ferrari.jpg" alt="Brand 17">
-    <img src="https://i.ibb.co/JQtLb6J/fiat.png" alt="Brand 18">
-    <img src="https://i.ibb.co/FqZdGhC/jeep.png" alt="Brand 19">
-    <img src="https://i.ibb.co/2NvGrwJ/kia.jpg" alt="Brand 20">
-    <img src="https://i.ibb.co/Q910dCq/suzuki.png" alt="Brand 21">
-    <img src="https://i.ibb.co/vQTrFPS/volvo.png" alt="Brand 22">
-  </div>
-</section>
-
+  <!-- Featured Brands -->
+  <section class="brands">
+    <h2>Our Main Brands</h2>
+    <div class="brands-container">
+      <img src="https://i.ibb.co/37vH32X/toyota.jpg" alt="Brand 1">
+      <img src="https://i.ibb.co/4Nrv069/renault.jpg" alt="Brand 2">
+      <img src="https://i.ibb.co/mtQP1jT/opel.jpg" alt="Brand 3">
+      <img src="https://i.ibb.co/MRpQKm5/nissan.jpg" alt="Brand 4">
+      <img src="https://i.ibb.co/Vwm7m5d/mitsubishi.jpg" alt="Brand 5">
+      <img src="https://i.ibb.co/R2LVzc2/merced-benz.jpg" alt="Brand 6">
+      <img src="https://i.ibb.co/1GxNKZD/hyundai.png" alt="Brand 7">
+      <img src="https://i.ibb.co/ngJP44Q/Honda.jpg" alt="Brand 8">
+      <img src="https://i.ibb.co/mJr1kby/gwm.jpg" alt="Brand 9">
+      <img src="https://i.ibb.co/F3Bj6Q3/datsun.jpg" alt="Brand 10">
+      <img src="https://i.ibb.co/DwM4SDk/chev.jpg" alt="Brand 11">
+      <img src="https://i.ibb.co/qBMbzRQ/BMW.png" alt="Brand 12">
+      <img src="https://i.ibb.co/chsfWwT/ford.jpg" alt="Brand 13">
+      <img src="https://i.ibb.co/fNgyq4C/vw.png" alt="Brand 14"> <img src="https://i.ibb.co/dGpKTzz/porsche.png" alt="Brand 15">
+      <img src="https://i.ibb.co/XVVZDSs/audi.png" alt="Brand 16">
+      <img src="https://i.ibb.co/PQH9f2B/ferrari.jpg" alt="Brand 17">
+      <img src="https://i.ibb.co/JQtLb6J/fiat.png" alt="Brand 18">
+      <img src="https://i.ibb.co/FqZdGhC/jeep.png" alt="Brand 19">
+      <img src="https://i.ibb.co/2NvGrwJ/kia.jpg" alt="Brand 20">
+      <img src="https://i.ibb.co/Q910dCq/suzuki.png" alt="Brand 21">
+      <img src="https://i.ibb.co/vQTrFPS/volvo.png" alt="Brand 22">
+    </div>
+  </section>
 
   <!-- Footer Section -->
   <footer class="footer" id="contact">
     <h2>Contact Us</h2>
     <p>We'd love to hear from you! Follow us on social media or send us a message.</p>
     <div class="social-icons">
-  <a href="https://www.facebook.com/profile.php?id=61565620319486" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-facebook-f"></i>
-  </a>
- <a href="https://www.instagram.com/conti.spares/" target="_blank" rel="noopener noreferrer">
-   <i class="fab fa-instagram"></i>
-   </a>
-   <a href="https://wa.me/27642152212" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-</div>
+      <a href="https://www.facebook.com/profile.php?id=61565620319486" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/conti.spares/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/27642152212" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
 
   </footer>
-  
+
   <!-- JavaScript for Form -->
   <script>
- // Event listener for the form submission
-document.getElementById("contactForm").addEventListener("submit", function (event) {
-  event.preventDefault(); // Prevent the default form submission
+    // Event listener for the form submission
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the default form submission
+      // Get form values
+      const firstName = document.getElementById("firstName").value.trim();
+      const surname = document.getElementById("surname").value.trim();
+      const phoneNumber = document.getElementById("phoneNumber").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const vehicleMakeModel = document.getElementById("vehicleMakeModel").value.trim();
+      const carYear = document.getElementById("carYear").value.trim();
+      const vehiclePart = document.getElementById("vehiclePart").value.trim();
+      // Validate input fields
+      if (!firstName || !surname || !phoneNumber || !email || !vehicleMakeModel || !carYear || !vehiclePart) {
+        alert("Please fill in all the fields before submitting.");
+        return;
+      }
+      // Create the WhatsApp API URL
+      const whatsappNumber = "27642152212";
+      const message = `Hi Conti Spares,%0A%0AI would like to inquire about a spare part:%0A%0AName: ${firstName} ${surname}%0APhone: ${phoneNumber}%0AEmail: ${email}%0AVehicle: ${vehicleMakeModel}%0AYear: ${carYear}%0APart Required: ${vehiclePart}`;
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+      // Redirect to WhatsApp
+      window.open(whatsappURL, "_blank");
+    });
 
-  // Get form values
-  const firstName = document.getElementById("firstName").value.trim();
-  const surname = document.getElementById("surname").value.trim();
-  const phoneNumber = document.getElementById("phoneNumber").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const vehicleMakeModel = document.getElementById("vehicleMakeModel").value.trim();
-  const carYear = document.getElementById("carYear").value.trim();
-  const vehiclePart = document.getElementById("vehiclePart").value.trim();
+    function searchProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const products = document.querySelectorAll(".product-card");
+      products.forEach((product) => {
+        const productName = product.querySelector("h3").textContent.toLowerCase();
+        product.style.display = productName.includes(input) ? "block" : "none";
+      });
+    }
 
-  // Validate input fields
-  if (!firstName || !surname || !phoneNumber || !email || !vehicleMakeModel || !carYear || !vehiclePart) {
-    alert("Please fill in all the fields before submitting.");
-    return;
+    function sortProducts() {
+      const sortType = document.getElementById("sortSelect").value;
+      const container = document.querySelector(".products-container");
+      const products = Array.from(container.children);
+      const sorted = products.sort((a, b) => {
+        if (sortType === "alphabetical") {
+          return a.querySelector("h3").textContent.localeCompare(b.querySelector("h3").textContent);
+        } else if (sortType === "status") {
+          return a.querySelector("p").textContent.localeCompare(b.querySelector("p").textContent);
+        }
+      });
+      container.innerHTML = ""; // Clear the container
+      sorted.forEach((product) => container.appendChild(product)); // Append sorted items
+    }
+
+    function paginateProducts() {
+  const products = document.querySelectorAll(".product-card");
+  const perPage = 6;
+  const totalPages = Math.ceil(products.length / perPage);
+  const pagination = document.getElementById("pagination");
+  pagination.innerHTML = ""; // Clear previous pagination
+
+  for (let i = 1; i <= totalPages; i++) {
+    const button = document.createElement("button");
+    button.textContent = i;
+    button.classList.add("pagination-button");
+    button.onclick = () => showPage(i, perPage);
+    pagination.appendChild(button);
   }
+  showPage(1, perPage); // Show the first page by default
+}
 
-  // Create the WhatsApp API URL
-  const whatsappNumber = "27642152212";
-  const message = `Hi Conti Spares,%0A%0AI would like to inquire about a spare part:%0A%0AName: ${firstName} ${surname}%0APhone: ${phoneNumber}%0AEmail: ${email}%0AVehicle: ${vehicleMakeModel}%0AYear: ${carYear}%0APart Required: ${vehiclePart}`;
-  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+function showPage(page, perPage) {
+  const products = document.querySelectorAll(".product-card");
+  products.forEach((product, index) => {
+    product.style.display =
+      index >= (page - 1) * perPage && index < page * perPage ? "block" : "none";
+  });
 
-  // Redirect to WhatsApp
-  window.open(whatsappURL, "_blank");
+  // Update active pagination button
+  const buttons = document.querySelectorAll(".pagination-button");
+  buttons.forEach((button, index) => {
+    if (index + 1 === page) {
+      button.classList.add("active");
+    } else {
+      button.classList.remove("active");
+    }
+  });
+}
+function showProductDetails(productName, images, description) {
+    const modal = document.getElementById("productModal");
+    const modalDetails = document.getElementById("modalDetails");
+
+    // Ensure images is an array and not empty
+    if (!images || images.length === 0) {
+        alert("No images available for this product.");
+        return;
+    }
+
+    // Create image gallery HTML
+    const imageGallery = images.map(img => `
+        <img src="${img}" alt="${productName}" style="max-width: 100%; margin: 5px;">
+    `).join("");
+
+    // Set modal content
+    modalDetails.innerHTML = `
+        <h2>${productName}</h2>
+        <div>${imageGallery}</div>
+        <p>${description}</p>
+        <button onclick="closeModal()">Close</button>
+    `;
+    
+    // Display modal
+    modal.style.display = "flex";
+
+    // Disable background scrolling
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    const modal = document.getElementById("productModal");
+    modal.style.display = "none";
+
+    // Re-enable background scrolling
+    document.body.style.overflow = 'auto';
+}
+
+// Initialize pagination when the document is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    paginateProducts();
 });
 
   </script>
 </body>
+
 </html>
