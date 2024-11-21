@@ -30,14 +30,14 @@
       <h1>Welcome to ContiSpares</h1>
       <p>Your trusted shop for new and second-hand car spares.</p>
       <form class="hero-form" id="contactForm">
-        <div class="form-row">
-          <input type="text" name="firstname" id="firstName" placeholder="First Name" required>
-          <input type="text" name="lastname" id="surname" placeholder="Surname" required>
-        </div>
-        <div class="form-row">
-          <input type="tel" name="phone" id="phoneNumber" placeholder="Cell Number" required>
-          <input type="email" name="email" id="email" placeholder="Email" required>
-        </div>
+         <div class="form-row">
+        <input type="text" name="firstname" id="firstName" placeholder="First Name" required autocomplete="given-name">
+        <input type="text" name="lastname" id="surname" placeholder="Surname" required autocomplete="family-name">
+    </div>
+    <div class="form-row">
+        <input type="tel" name="phone" id="phoneNumber" placeholder="Cell Number" required autocomplete="tel">
+        <input type="email" name="email" id="email" placeholder="Email" required autocomplete="email">
+    </div>
         <div class="form-row">
           <input type="text" name="vehicle" id="vehicleMakeModel" placeholder="Vehicle Make, Model" required>
           <input type="text" name="year" id="carYear" placeholder="Car Year" required>
