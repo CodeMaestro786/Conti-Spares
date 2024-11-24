@@ -365,23 +365,22 @@ textarea {
 }
 
 .logo img {
-  width: 350px; /* Adjust this size as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 200px; /* Adjust for larger screens */
+  height: auto; /* Keep aspect ratio */
 }
 
-/* Responsive adjustment */
 @media (max-width: 768px) {
   .logo img {
-    width: 120px; /* Smaller logo for tablets and smaller devices */
+    width: 250px; /* Adjust logo size on smaller screens */
   }
 }
 
 @media (max-width: 480px) {
-   .logo img {
-    width: 150px; /* Increase this value as needed */
-    height: auto; /* Maintain aspect ratio */
+  .logo img {
+    width: 300px; /* Increase for very small devices */
   }
 }
+
 
 /* Modal Styles */
     .modal {
@@ -697,3 +696,4 @@ textarea {
 .linkedin-icon:hover {
   color: #0056b3; /* Darker shade on hover */
 }
+
