@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en"> <!-- Added lang attribute for accessibility -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +15,16 @@
     <div class="logo">
       <img src="https://i.ibb.co/DgLP5Fq/logo.png" alt="ContiSpares Logo">
     </div>
-    <nav>
+   <!-- Navigation items -->
+<nav>
   <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about" aria-label="Navigate to About Section">About</a></li>
-    <li><a href="#products">Products</a></li>
-    <li><a href="#contact-us">Contact Us</a></li> <!-- Updated link -->
+    <li><a href="#home" class="nav-link">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#products" class="nav-link">Products</a></li>
+    <li><a href="#contact-us" class="nav-link">Contact Us</a></li>
   </ul>
 </nav>
+
 
   </header>
 
@@ -176,13 +179,22 @@
         <h3>Datsun Go</h3>
         <p><strong>Status:</strong> Stripping for parts</p>
       </div>
-     <div class="product-card" onclick="showProductDetails('Detailed info about Mercedes-Benz B180', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
-  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
+     <div class="product-card" onclick="showProductDetails(
+  'Detailed info about Mercedes-Benz B180', 
+  [
+    'https://i.ibb.co/MPPJPrh/b180-1.jpg', 
+    'https://i.ibb.co/HtgcY1F/b180-2.jpg',
+    'https://i.ibb.co/k8HNTW3/b180-3.jpg',
+    'https://i.ibb.co/8gFrMYv/benz-4.jpg',
+    'https://i.ibb.co/Z1hyJSd/benz-5.jpg'
+  ],
+'Searching for Mercedes B180 spares? Conti Spares has exactly what you need! Premium parts at affordable prices, ready for you.Get in touch with us today.Don’t wait call now and secure your Mercedes spares!'
 )">
-        <img src="https://i.ibb.co/sqgWd4w/mercedes-B180.jpg" alt="Mercedes-Benz B180">
-        <h3>Mercedes-Benz B180</h3>
-        <p><strong>Status:</strong> Stripping for parts</p>
-      </div>
+    <img src="https://i.ibb.co/sqgWd4w/mercedes-B180.jpg" alt="Mercedes-Benz B180">
+    <h3>Mercedes-Benz B180</h3>
+    <p><strong>Status:</strong> Stripping for parts</p>
+</div>
+
      <div class="product-card" onclick="showProductDetails('Detailed info about Nissan Almera', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
   'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
 )">
@@ -220,9 +232,7 @@
     </div
 </div>
     </div>
-      <div id="pagination" class="pagination">
-
-    </div>
+      <div id="pagination" class="pagination"></div>
   </section>
 
 
@@ -231,16 +241,18 @@
   <h2>Contact Us</h2>
   <p>We'd love to hear from you! </p>
 
-  <div class="contact-card">
-    <h3>Call Us Now!</h3>
-    <div>
-      <a href="tel:27767802386">+27 76 780 2386</a>
-      <a href="tel:27828151732">+27 82 815 1732</a>
-    </div>
+ <div class="contact-card">
+  <h3>Call Us Now!</h3>
+  <div>
+    <a href="tel:27767802386"><i class="fas fa-phone" style="color: blue;"></i> +27 76 780 2386</a>
+    <a href="tel:27828151732"><i class="fas fa-phone" style="color: green;"></i> +27 82 815 1732</a>
   </div>
+</div>
 
   <div class="contact-card">
     <h3>Find Us Here!</h3>
+    <p><a href="https://www.google.com/maps?q=18 Sydney Rd Greyville, Berea, 4001" target="_blank">18 Sydney Rd Greyville, Berea, 4001</a></p>
+
     <div class="map-container">
       
       <iframe src="https://www.google.com/maps/embed/v1/place?q=Conti+Spares&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" style="border:0" allowfullscreen="" loading="lazy"></iframe>
@@ -311,6 +323,13 @@
       <img src="https://i.ibb.co/vQTrFPS/volvo.png" alt="Brand 22">
     </div>
   </section>
+  
+    <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal()">&times;</span>
+      <div id="modalDetails"></div>
+    </div>
+  </div>
 
   <!-- Footer Section -->
   <!-- Footer Section -->
@@ -319,7 +338,7 @@
     <p>© 2024 CONTI SPARES. All rights reserved.</p>
     <div class="developer-info">
       <p>Developed by <a href="https://www.linkedin.com/in/muhammed-azhar-syed-1bb0742b7/" target="_blank" rel="noopener noreferrer">Muhammed Azhar</a></p>
-      <a href="https://www.linkedin.com/in/muhammed-azhar-syed-1bb0742b7/" target="_blank" rel="noopener noreferrer" class="linkedin-icon">
+      <a href="https://www.linkedin.com/in/muhammed-azhar-syed-1bb0742b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" class="linkedin-icon">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </div>
@@ -329,29 +348,58 @@
 
   <!-- JavaScript for Form -->
   <script>
-    // Event listener for the form submission
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-      event.preventDefault(); // Prevent the default form submission
-      // Get form values
-      const firstName = document.getElementById("firstName").value.trim();
-      const surname = document.getElementById("surname").value.trim();
-      const phoneNumber = document.getElementById("phoneNumber").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const vehicleMakeModel = document.getElementById("vehicleMakeModel").value.trim();
-      const carYear = document.getElementById("carYear").value.trim();
-      const vehiclePart = document.getElementById("vehiclePart").value.trim();
-      // Validate input fields
-      if (!firstName || !surname || !phoneNumber || !email || !vehicleMakeModel || !carYear || !vehiclePart) {
-        alert("Please fill in all the fields before submitting.");
-        return;
-      }
-      // Create the WhatsApp API URL
-      const whatsappNumber = "27642152212";
-      const message = `Hi Conti Spares,%0A%0AI would like to inquire about a spare part:%0A%0AName: ${firstName} ${surname}%0APhone: ${phoneNumber}%0AEmail: ${email}%0AVehicle: ${vehicleMakeModel}%0AYear: ${carYear}%0APart Required: ${vehiclePart}`;
-      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
-      // Redirect to WhatsApp
-      window.open(whatsappURL, "_blank");
+    // Initialize pagination on DOM content loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      paginateProducts(); // Initialize pagination
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('.nav-link').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
     });
+
+    function paginateProducts() {
+      const products = document.querySelectorAll(".product-card");
+      const perPage = 6; // Number of products per page
+      const totalPages = Math.ceil(products.length / perPage);
+      const pagination = document.getElementById("pagination");
+      pagination.innerHTML = ""; // Clear previous pagination
+
+      for (let i = 1; i <= totalPages; i++) {
+        const button = document.createElement("button");
+        button.textContent = i;
+        button.classList.add("pagination-button");
+        button.onclick = () => showPage(i, perPage); // Attach click event
+        pagination.appendChild(button);
+      }
+      showPage(1, perPage); // Show the first page by default
+    }
+
+    function showPage(page, perPage) {
+      const products = document.querySelectorAll(".product-card");
+      products.forEach((product, index) => {
+        product.style.display =
+          index >= (page - 1) * perPage && index < page * perPage ? "block" : "none";
+      });
+
+      // Scroll to the first product of the current page
+      const firstProduct = products[(page - 1) * perPage];
+      if (firstProduct) {
+        firstProduct.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      // Update active pagination button
+      const buttons = document.querySelectorAll(".pagination-button");
+      buttons.forEach((button, index) => {
+        button.classList.toggle("active", index + 1 === page);
+      });
+    }
 
     function searchProducts() {
       const input = document.getElementById("searchInput").value.toLowerCase();
@@ -363,63 +411,23 @@
     }
 
     function sortProducts() {
-    const sortType = document.getElementById("sortSelect").value;
-    const container = document.querySelector(".products-container");
-    const products = Array.from(container.children);
-    
-    const sorted = products.sort((a, b) => {
+      const sortType = document.getElementById("sortSelect").value;
+      const container = document.querySelector(".products-container");
+      const products = Array.from(container.children);
+
+      products.sort((a, b) => {
         if (sortType === "alphabetical") {
-            return a.querySelector("h3").textContent.localeCompare(b.querySelector("h3").textContent);
+          return a.querySelector("h3").textContent.localeCompare(b.querySelector("h3").textContent);
         } else if (sortType === "status") {
-            return a.querySelector("p").textContent.localeCompare(b.querySelector("p").textContent);
+          return a.querySelector("p").textContent.localeCompare(b.querySelector("p").textContent);
         }
-    });
+      });
 
-    container.innerHTML = ''; // Clear the current products
-    sorted.forEach(product => container.appendChild(product)); // Append sorted products
-}
-
-
-function paginateProducts() {
-    const products = document.querySelectorAll(".product-card");
-    const perPage = 6; // Number of products per page
-    const totalPages = Math.ceil(products.length / perPage);
-    const pagination = document.getElementById("pagination");
-    pagination.innerHTML = ""; // Clear previous pagination
-
-    for (let i = 1; i <= totalPages; i++) {
-        const button = document.createElement("button");
-        button.textContent = i;
-        button.classList.add("pagination-button");
-        button.onclick = () => showPage(i, perPage); // Call showPage for each page number
-        pagination.appendChild(button);
+      container.innerHTML = ''; // Clear the current products
+      products.forEach(product => container.appendChild(product)); // Append sorted products
     }
-    showPage(1, perPage); // Show the first page by default
-}
 
-function showPage(page, perPage) {
-    const products = document.querySelectorAll(".product-card");
-    products.forEach((product, index) => {
-        product.style.display =
-            index >= (page - 1) * perPage && index < page * perPage ? "block" : "none";
-    });
-
-    // Update active pagination button
-    const buttons = document.querySelectorAll(".pagination-button");
-    buttons.forEach((button, index) => {
-        if (index + 1 === page) {
-            button.classList.add("active");
-        } else {
-            button.classList.remove("active");
-        }
-    });
-
-    // Scroll to the top of the products container
-    const productsContainer = document.querySelector(".products-container");
-    productsContainer.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the products container
-}
-
-function showProductDetails(productName, images, description) {
+  function showProductDetails(productName, images, description) {
     const modal = document.getElementById("productModal");
     const modalDetails = document.getElementById("modalDetails");
 
@@ -456,31 +464,13 @@ function closeModal() {
     // Re-enable background scrolling
     document.body.style.overflow = 'auto';
 }
-
-// Initialize pagination when the document is fully loaded
-document.addEventListener("DOMContentLoaded", function() {
-    paginateProducts();
+    
+    document.getElementById("searchInput").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault(); // Prevent default form submission
+    searchProducts(); // Call your search function
+  }
 });
-
-    document.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', function(event) {
-    if (this.getAttribute('href').startsWith('tel:')) {
-      // Allow tel links to function
-      return;
-    }
-    event.preventDefault(); // Only prevent default for non-tel links
-  });
-});
-document.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', function(event) {
-    if (this.getAttribute('href').startsWith('tel:')) {
-      // Allow tel links to function
-      return;
-    }
-    event.preventDefault(); // Only prevent default for non-tel links
-  });
-});
-
   </script>
 </body>
 
