@@ -5,6 +5,7 @@
   <title>ContiSpares - Home</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" 
 </head>
 
 <body>
@@ -14,21 +15,21 @@
       <img src="https://i.ibb.co/DgLP5Fq/logo.png" alt="ContiSpares Logo">
     </div>
     <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about" aria-label="Navigate to About Section">About</a>
-        </li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about" aria-label="Navigate to About Section">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#contact-us">Contact Us</a></li> <!-- Updated link -->
+  </ul>
+</nav>
+
   </header>
 
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="hero-content">
       <h1>Welcome to ContiSpares</h1>
-      <p>Your trusted shop for new and second-hand car spares.</p>
+      <p>Your trusted shop for new and second-hand car spares.Fill in this form. And we will get back to you</p>
       <form class="hero-form" id="contactForm">
          <div class="form-row">
         <input type="text" name="firstname" id="firstName" placeholder="First Name" required autocomplete="given-name">
@@ -104,23 +105,31 @@
       </div>
       </div>
       <!-- Example Product Card -->
-      <div class="product-card">
+      <div class="product-card" onclick="showProductDetails('Detailed info about Datsun Go', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
+  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
+)">
         <img src="https://i.ibb.co/r5QKTL2/IMG-20241120-WA0046.jpg" alt=" Datsun Go">
         <h3>Datsun Go</h3>
         <p><strong>Status:</strong> Runner, Selling complete</p>
       </div>
-      <div class="product-card">
+      <div class="product-card" onclick="showProductDetails('Detailed info about Hyundai I10', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
+  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
+)">
         <img src="https://i.ibb.co/2SwjQ3x/IMG-20241120-WA0044.jpg" alt="Hyundai i10">
-        <h3>Hyundai i10</h3>
+        <h3>Hyundai I10</h3>
         <p><strong>Status:</strong> Stripping for parts</p>
       </div>
 
-      <div class="product-card">
-        <img src="https://i.ibb.co/MMKCv8H/climber.jpg" alt="Renault Climber">
-        <h3>Renault Climber</h3>
+      <div class="product-card" onclick="showProductDetails('Detailed info about Renault Kwid Climber', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
+  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
+)">
+        <img src="https://i.ibb.co/MMKCv8H/climber.jpg" alt="Renault Kwid Climber">
+        <h3>Renault Kwid Climber</h3>
         <p><strong>Status:</strong> Stripping for parts</p>
       </div>
-      <div class="product-card">
+      <div class="product-card" onclick="showProductDetails('Detailed info about Datsun Go', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
+  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
+)">
         <img src="https://i.ibb.co/KyZRvFP/IMG-20241120-WA0047.jpg" alt="Datsun Go">
         <h3>Datsun Go</h3>
         <p><strong>Status:</strong> Stripping for parts</p>
@@ -132,52 +141,72 @@
         <h3>Datsun Go</h3>
         <p>Status: Stripping for parts</p>
       </div>
-      <div class="product-card">
+      <div class="product-card" onclick="showProductDetails('Detailed info about Renault Kwid', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
+  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
+)">
         <img src="https://i.ibb.co/jTfQn5N/IMG-20241120-WA0049.jpg" alt="Renault Kwid">
         <h3>Renault Kwid</h3>
         <p><strong>Status:</strong> Stripping for parts</p>
       </div>
-      <div class="product-card">
+      <div class="product-card" onclick="showProductDetails('Detailed info about Honda Civic Sedan', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
+  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
+)">
         <img src="https://via.placeholder.com/300x200" alt="Honda Civic">
         <h3>Honda Civic Sedan</h3>
         <p><strong>Status:</strong> Stripping for parts</p>
       </div>
-      <div class="product-card">
+      <div class="product-card" onclick="showProductDetails('Detailed info about Hyundai I10', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
+  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
+)">
         <img src="https://i.ibb.co/3cs9n98/oldi10.jpg" alt="Hyundai i10">
-        <h3>Hyundai i10</h3>
+        <h3>Hyundai I10</h3>
         <p><strong>Status:</strong> Stripping for parts</p>
       </div>
-      <div class="product-card">
+      <div class="product-card" onclick="showProductDetails('Detailed info about Opel Corsa', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
+  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
+)">
         <img src="https://via.placeholder.com/300x200" alt="Opel Corsa">
         <h3>Opel Corsa</h3>
         <p><strong>Status:</strong> Stripping for parts</p>
       </div>
-      <div class="product-card">
+     <div class="product-card" onclick="showProductDetails('Detailed info about Datsun Go', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
+  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
+)">
         <img src="https://i.ibb.co/KqWZ4Bj/datsungo1.jpg" alt="Datsun Go">
         <h3>Datsun Go</h3>
         <p><strong>Status:</strong> Stripping for parts</p>
       </div>
-      <div class="product-card">
+     <div class="product-card" onclick="showProductDetails('Detailed info about Mercedes-Benz B180', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
+  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
+)">
         <img src="https://i.ibb.co/sqgWd4w/mercedes-B180.jpg" alt="Mercedes-Benz B180">
         <h3>Mercedes-Benz B180</h3>
         <p><strong>Status:</strong> Stripping for parts</p>
       </div>
-      <div class="product-card">
+     <div class="product-card" onclick="showProductDetails('Detailed info about Nissan Almera', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
+  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
+)">
         <img src="https://i.ibb.co/StVn39J/almera.jpg" alt="Nissan Almera">
         <h3>Nissan Almera</h3>
         <p><strong>Status:</strong> Stripping for parts</p>
       </div>
-      <div class="product-card">
+      <div class="product-card" onclick="showProductDetails('Detailed info about Chevrolet Cruze', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
+  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
+)">
         <img src="https://i.ibb.co/SfpqztB/cruze.jpg" alt="Chevrolet Cruze">
         <h3>Chevrolet Cruze</h3>
         <p><strong>Status:</strong> Stripping for parts</p>
       </div>
-      <div class="product-card">
+      <div class="product-card" onclick="showProductDetails('Detailed info about Ford Focus ST', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
+  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
+)">
         <img src="https://i.ibb.co/9qVxsNK/focus-st-3.jpg" alt="Ford Focus ST">
         <h3>Ford Focus ST</h3>
         <p><strong>Status:</strong> Stripping for parts</p>
       </div>
-      <div class="product-card">
+     <div class="product-card" onclick="showProductDetails('Detailed info about BMW 320i', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
+  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
+)">
         <img src="https://i.ibb.co/58jc6wP/BMW320-I-4.jpg" alt="BMW 320i">
         <h3>BMW 320i</h3>
         <p><strong>Status:</strong> Stripping for parts</p>
@@ -190,10 +219,47 @@
       </div>
     </div
 </div>
+    </div>
       <div id="pagination" class="pagination">
 
     </div>
   </section>
+
+
+<!-- Contact Us Section -->
+<section class="contact-us" id="contact-us">
+  <h2>Contact Us</h2>
+  <p>We'd love to hear from you! </p>
+
+  <div class="contact-card">
+    <h3>Call Us Now!</h3>
+    <div>
+      <a href="tel:27767802386">+27 76 780 2386</a>
+      <a href="tel:27828151732">+27 82 815 1732</a>
+    </div>
+  </div>
+
+  <div class="contact-card">
+    <h3>Find Us Here!</h3>
+    <div class="map-container">
+      
+      <iframe src="https://www.google.com/maps/embed/v1/place?q=Conti+Spares&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" style="border:0" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <div class="contact-card">
+    <h3>Check Out Our Social Media</h3>
+    <div class="social-media-links">
+      <a href="https://www.facebook.com/profile.php?id=61565620319486" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook-f"></i> <!-- Font Awesome Facebook Icon -->
+      </a>
+      <a href="https://www.instagram.com/conti.spares/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i> <!-- Font Awesome Instagram Icon -->
+      </a>
+    </div>
+  </div>
+</section>
+
 
   <!-- Customer Reviews -->
   <section class="reviews" id="reviews">
@@ -247,22 +313,19 @@
   </section>
 
   <!-- Footer Section -->
-  <footer class="footer" id="contact">
-    <h2>Contact Us</h2>
-    <p>We'd love to hear from you! Follow us on social media or send us a message.</p>
-    <div class="social-icons">
-      <a href="https://www.facebook.com/profile.php?id=61565620319486" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://www.instagram.com/conti.spares/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://wa.me/27642152212" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i>
+  <!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2024 CONTI SPARES. All rights reserved.</p>
+    <div class="developer-info">
+      <p>Developed by <a href="https://www.linkedin.com/in/muhammed-azhar-syed-1bb0742b7/" target="_blank" rel="noopener noreferrer">Muhammed Azhar</a></p>
+      <a href="https://www.linkedin.com/in/muhammed-azhar-syed-1bb0742b7/" target="_blank" rel="noopener noreferrer" class="linkedin-icon">
+        <i class="fab fa-linkedin-in"></i>
       </a>
     </div>
+  </div>
+</footer>
 
-  </footer>
 
   <!-- JavaScript for Form -->
   <script>
@@ -300,54 +363,62 @@
     }
 
     function sortProducts() {
-      const sortType = document.getElementById("sortSelect").value;
-      const container = document.querySelector(".products-container");
-      const products = Array.from(container.children);
-      const sorted = products.sort((a, b) => {
+    const sortType = document.getElementById("sortSelect").value;
+    const container = document.querySelector(".products-container");
+    const products = Array.from(container.children);
+    
+    const sorted = products.sort((a, b) => {
         if (sortType === "alphabetical") {
-          return a.querySelector("h3").textContent.localeCompare(b.querySelector("h3").textContent);
+            return a.querySelector("h3").textContent.localeCompare(b.querySelector("h3").textContent);
         } else if (sortType === "status") {
-          return a.querySelector("p").textContent.localeCompare(b.querySelector("p").textContent);
+            return a.querySelector("p").textContent.localeCompare(b.querySelector("p").textContent);
         }
-      });
-      container.innerHTML = ""; // Clear the container
-      sorted.forEach((product) => container.appendChild(product)); // Append sorted items
+    });
+
+    container.innerHTML = ''; // Clear the current products
+    sorted.forEach(product => container.appendChild(product)); // Append sorted products
+}
+
+
+function paginateProducts() {
+    const products = document.querySelectorAll(".product-card");
+    const perPage = 6; // Number of products per page
+    const totalPages = Math.ceil(products.length / perPage);
+    const pagination = document.getElementById("pagination");
+    pagination.innerHTML = ""; // Clear previous pagination
+
+    for (let i = 1; i <= totalPages; i++) {
+        const button = document.createElement("button");
+        button.textContent = i;
+        button.classList.add("pagination-button");
+        button.onclick = () => showPage(i, perPage); // Call showPage for each page number
+        pagination.appendChild(button);
     }
-
-    function paginateProducts() {
-  const products = document.querySelectorAll(".product-card");
-  const perPage = 6;
-  const totalPages = Math.ceil(products.length / perPage);
-  const pagination = document.getElementById("pagination");
-  pagination.innerHTML = ""; // Clear previous pagination
-
-  for (let i = 1; i <= totalPages; i++) {
-    const button = document.createElement("button");
-    button.textContent = i;
-    button.classList.add("pagination-button");
-    button.onclick = () => showPage(i, perPage);
-    pagination.appendChild(button);
-  }
-  showPage(1, perPage); // Show the first page by default
+    showPage(1, perPage); // Show the first page by default
 }
 
 function showPage(page, perPage) {
-  const products = document.querySelectorAll(".product-card");
-  products.forEach((product, index) => {
-    product.style.display =
-      index >= (page - 1) * perPage && index < page * perPage ? "block" : "none";
-  });
+    const products = document.querySelectorAll(".product-card");
+    products.forEach((product, index) => {
+        product.style.display =
+            index >= (page - 1) * perPage && index < page * perPage ? "block" : "none";
+    });
 
-  // Update active pagination button
-  const buttons = document.querySelectorAll(".pagination-button");
-  buttons.forEach((button, index) => {
-    if (index + 1 === page) {
-      button.classList.add("active");
-    } else {
-      button.classList.remove("active");
-    }
-  });
+    // Update active pagination button
+    const buttons = document.querySelectorAll(".pagination-button");
+    buttons.forEach((button, index) => {
+        if (index + 1 === page) {
+            button.classList.add("active");
+        } else {
+            button.classList.remove("active");
+        }
+    });
+
+    // Scroll to the top of the products container
+    const productsContainer = document.querySelector(".products-container");
+    productsContainer.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the products container
 }
+
 function showProductDetails(productName, images, description) {
     const modal = document.getElementById("productModal");
     const modalDetails = document.getElementById("modalDetails");
@@ -389,6 +460,16 @@ function closeModal() {
 // Initialize pagination when the document is fully loaded
 document.addEventListener("DOMContentLoaded", function() {
     paginateProducts();
+});
+
+    document.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', function(event) {
+    if (this.getAttribute('href').startsWith('tel:')) {
+      // Allow tel links to function
+      return;
+    }
+    event.preventDefault(); // Only prevent default for non-tel links
+  });
 });
 
   </script>
