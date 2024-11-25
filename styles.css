@@ -39,18 +39,6 @@ body {
 }
 
 /* Hero Section */
-.hero {
-    display: flex; /* Use flexbox to align items in a row */
-    align-items: center; /* Center items vertically */
-    padding: 20px; /* Padding around the hero section */
-    background-color: #f5f5f5; /* Optional background */
-
-.hero-content {
-    flex: 1; /* Allow form to take available space */
-    max-width: 600px; /* Limit the maximum width */
-    margin-right: 20px; /* Space between form and image */
-}
-
 .hero-form {
     display: flex;
     flex-direction: column;
@@ -109,33 +97,6 @@ button {
 button:hover {
     background-color: #0056b3; /* Darker shade on hover */
     transform: translateY(-2px); /* Lift effect on hover */
-}
-
-.hero-image {
-    flex: 1; 
-    max-width: 600px;
-}
-.hero-image img {
-    width: 100%; /* Image should cover its container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounded corners for the image */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Optional shadow for the image */
-}
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column; /* Stack vertically on smaller screens */
-        align-items: center; /* Center items for small screens */
-    }
-    
-    .hero-content {
-        margin-right: 0; /* Remove right margin in column layout */
-        width: 100%; /* Full width for form on small screens */
-    }
-
-    .hero-image {
-        width: 100%; /* Full width for image on small screens */
-        margin-top: 20px; /* Space between form and image when stacked */
-    }
 }
 
 /* About Section */
