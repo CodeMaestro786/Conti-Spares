@@ -343,6 +343,38 @@
 
   <!-- JavaScript for Form -->
   <script>
+
+      <script>
+    
+    // Add this event listener to handle form submission
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Gather form data
+    const firstName = document.getElementById("firstName").value;
+    const surname = document.getElementById("surname").value;
+    const phoneNumber = document.getElementById("phoneNumber").value;
+    const email = document.getElementById("email").value;
+    const vehicle = document.getElementById("vehicleMakeModel").value;
+    const year = document.getElementById("carYear").value;
+    const partsRequired = document.getElementById("vehiclePart").value;
+
+    // Construct the message to be sent via WhatsApp
+    const message = `Hello Conti Spares, I am interested in car parts. Here are my details:\n\n` +
+                    `*Name:* ${firstName} ${surname}\n` +
+                    `*Phone Number:* ${phoneNumber}\n` +
+                    `*Email:* ${email}\n` +
+                    `*Vehicle:* ${vehicle} (${year})\n` +
+                    `*Parts Required:* ${partsRequired}`;
+
+    // Replace "<YOUR_PHONE_NUMBER>" with your actual WhatsApp number in international format
+    const whatsappNumber = "27642152212"; // e.g., "27767802386"
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
+
+    // Redirect to WhatsApp
+    window.open(whatsappUrl, '_blank');
+});
+
     // Initialize pagination on DOM content loaded
     document.addEventListener("DOMContentLoaded", function() {
       paginateProducts(); // Initialize pagination
