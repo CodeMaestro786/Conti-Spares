@@ -701,54 +701,59 @@ textarea {
 .reviews-carousel {
     display: flex;
     align-items: center;
-    position: relative;
-    overflow: hidden; /* Hide overflow to create carousel effect */
+    justify-content: center;
 }
 
 .reviews-container {
     display: flex;
-    flex-direction: row; /* Change to row for side-by-side */
-    transition: transform 0.3s ease; /* Smooth transition for carousel */
+    transition: transform 0.5s ease; /* Smooth transition for carousel */
+    overflow: hidden; /* Hide overflow to enable carousel effect */
 }
 
 .review {
-    min-width: 300px;  /* Minimum width for each review */
+    min-width: 300px;  /* Adjust minimum width */
     flex: 0 0 auto;    /* Prevent flex items from growing */
-    background-color: #f9f9f9; /* Light background for reviews */
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 15px; /* Padding inside the review */
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    padding: 15px; 
     margin: 0 10px; /* Space between reviews */
+    font-size: 1.2em; /* Larger font size */
 }
 
 .nav-button {
-    background-color: transparent; /* No background */
-    border: none; /* No borders */
-    font-size: 24px; /* Larger font for arrows */
-    cursor: pointer; /* Pointer cursor */
-    color: #007bff; /* Button color */
-    transition: color 0.3s; /* Smooth color transition */
+    background-color: transparent; 
+    border: none; 
+    font-size: 24px; 
+    cursor: pointer; 
+    color: #007bff; 
 }
 
 .nav-button:hover {
-    color: #0056b3; /* Change color on hover */
+    color: #0056b3; 
 }
 
 #reviewButton {
-    margin-top: 20px; /* Space above button */
+    margin-top: 20px; 
     padding: 10px 20px;
-    background-color: #007bff; /* Main button color */
-    color: white; /* Text color */
-    border: none; /* No borders */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor */
-    transition: background-color 0.3s; /* Smooth transition for hover */
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
 }
 
 #reviewButton:hover {
-    background-color: #0056b3; /* Darker on hover */
+    background-color: #0056b3; 
+}
+@media (min-width: 600px) {
+    .review {
+        min-width: 200px; /* Smaller size for more reviews in one row */
+    }
 }
 
-#reviewButton:active {
-    background-color: #dc3545; /* Color when clicked */
+@media (min-width: 900px) {
+    .review {
+        min-width: 300px; /* Wider reviews for larger screens */
+    }
 }
