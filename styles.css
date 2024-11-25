@@ -39,6 +39,19 @@ body {
 }
 
 /* Hero Section */
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #eee;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
 .hero-form {
     display: flex;
     flex-direction: column;
@@ -60,7 +73,6 @@ body {
     color: #333; /* Dark heading color */
     text-align: center; /* Center align heading */
 }
-
 .form-row {
     display: flex;
     gap: 15px; /* Increased gap between inputs */
