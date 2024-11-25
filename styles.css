@@ -49,13 +49,22 @@ body {
 }
 
 .hero-content {
-  max-width: 50%;
+ flex: 1; /* Allow content to grow */
+  max-width: 600px; /* Limit max-width for larger screens */
+}
+.hero-image {
+  flex: 1; /* Allow image to fill space */
+  max-width: 600px; /* Limit max-width for larger screens */
 }
 
+.hero-image img {
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+}
 .hero-form {
     display: flex;
     flex-direction: column;
-    max-width: 600px; /* Set max-width for better layout */
     margin: auto; /* Center the form horizontally */
     background: #fff; /* White background for the form */
     padding: 20px; /* Inner padding */
@@ -110,6 +119,29 @@ button:hover {
     background-color: #0056b3; /* Darker shade on hover */
     transform: translateY(-2px); /* Lift effect on hover */
 }
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Stack hero content and image */
+    align-items: center; /* Center align for smaller screens */
+  }
+
+  .hero-content, .hero-image {
+    max-width: 100%; /* Full width on smaller screens */
+    margin-bottom: 20px; /* Space between content and image */
+  }
+
+  .form-row {
+    flex-direction: column; /* Stack input fields vertically */
+  }
+}
+
+@media (max-width: 480px) {
+  .header li {
+    margin: 5px 0; /* Adjust margin for smaller screens */
+  }
+}
+
 
 /* About Section */
 .about {
