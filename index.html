@@ -100,12 +100,6 @@
         <button onclick="searchProducts()">Search</button>
       </div>
       </div>
-      <div class="sort-options">
-        <select id="sortSelect" onchange="sortProducts()">
-          <option value="alphabetical">Sort by Name</option>
-          <option value="status">Sort by Status</option>
-        </select>
-      </div>
       </div>
       <!-- Example Product Card -->
       <div class="product-card" onclick="showProductDetails('Detailed info about Datsun Go', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
@@ -352,17 +346,6 @@
     // Initialize pagination on DOM content loaded
     document.addEventListener("DOMContentLoaded", function() {
       paginateProducts(); // Initialize pagination
-      // Smooth scrolling for navigation links
-      document.querySelectorAll('.nav-link').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href');
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-          }
-        });
-      });
     });
 
     function paginateProducts() {
@@ -383,24 +366,27 @@
     }
 
     function showPage(page, perPage) {
-      const products = document.querySelectorAll(".product-card");
-      products.forEach((product, index) => {
+    const products = document.querySelectorAll(".product-card");
+    products.forEach((product, index) => {
         product.style.display =
-          index >= (page - 1) * perPage && index < page * perPage ? "block" : "none";
-      });
+            index >= (page - 1) * perPage && index < page * perPage ? "block" : "none";
+    });
 
-      // Scroll to the first product of the current page
-      const firstProduct = products[(page - 1) * perPage];
-      if (firstProduct) {
+    // Remove or comment out this part to prevent automatic scrolling
+    /*
+    const firstProduct = products[(page - 1) * perPage];
+    if (firstProduct) {
         firstProduct.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-
-      // Update active pagination button
-      const buttons = document.querySelectorAll(".pagination-button");
-      buttons.forEach((button, index) => {
-        button.classList.toggle("active", index + 1 === page);
-      });
     }
+    */
+
+    // Update active pagination button
+    const buttons = document.querySelectorAll(".pagination-button");
+    buttons.forEach((button, index) => {
+        button.classList.toggle("active", index + 1 === page);
+    });
+}
+
 
     function searchProducts() {
       const input = document.getElementById("searchInput").value.toLowerCase();
@@ -411,23 +397,7 @@
       });
     }
 
-    function sortProducts() {
-      const sortType = document.getElementById("sortSelect").value;
-      const container = document.querySelector(".products-container");
-      const products = Array.from(container.children);
-
-      products.sort((a, b) => {
-        if (sortType === "alphabetical") {
-          return a.querySelector("h3").textContent.localeCompare(b.querySelector("h3").textContent);
-        } else if (sortType === "status") {
-          return a.querySelector("p").textContent.localeCompare(b.querySelector("p").textContent);
-        }
-      });
-
-      container.innerHTML = ''; // Clear the current products
-      products.forEach(product => container.appendChild(product)); // Append sorted products
-    }
-
+    
   function showProductDetails(productName, images, description) {
     const modal = document.getElementById("productModal");
     const modalDetails = document.getElementById("modalDetails");
