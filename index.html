@@ -1,325 +1,310 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Added lang attribute for accessibility -->
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ContiSpares - Home</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Find high-quality new and used car spare parts at Conti Spares. Affordable prices and wide selection.">
+  <title>Conti Spares | Quality Car Parts</title>
+  <link rel="icon" href="img/icon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" 
-</head>
 
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 10px;
+      background-color: #000000;
+      border-bottom: 1px solid #ff0000;
+    }
+
+    header .logo img {
+      max-width: 500px; /* Logo remains fixed for desktop */
+      height: auto;
+    }
+
+    nav {
+      background-color: #ff0000;
+      padding: 20px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center; /* Center navigation links */
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-weight: 600;
+      font-size: 30px; /* Font size for desktop views */
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffffff;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+      background-color: #676767;
+    }
+
+    .hero-content {
+      max-width: 50%; /* Fixed max-width for desktop */
+    }
+
+    .hero-content h1 {
+      font-size: 36px;
+      color: #090909;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color:#000000;
+    }
+
+    .hero-content form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-content form .form-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .hero-content form input,
+    .hero-content form textarea,
+    .hero-content form button {
+      padding: 10px;
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .hero-content form textarea {
+      resize: none;
+    }
+
+    .hero-content form button {
+      background-color: #ff0000;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .hero-content form button:hover {
+      background-color: #000000;
+    }
+
+    .hero-image img {
+      max-width: 1000px; /* Fixed image size for desktop */
+      border-radius: 5px;
+    }
+
+    .brands {
+      text-align: center;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+
+    .brands h2 {
+      font-size: 28px;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+
+    .brands {
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+
+    .brands-container img {
+      width: 150px;
+      height: 80px;
+      object-fit: contain; /* Ensures proper scaling without distortion */
+      margin: 10px; /* Optional: Adds spacing between images */
+      display: inline-block; /* Keeps images inline */
+    }
+
+    footer {
+      background-color: #000000;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 25px;
+    }
+
+    footer a {
+      color: #2d6fff;
+      text-decoration: none;
+      font-size: 25px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Media queries for responsiveness for non-desktop devices */
+    @media (max-width: 768px) {
+      header .logo img {
+        max-width: 90%; /* Responsive logo for smaller screens */
+      }
+
+      nav ul li a {
+        font-size: 20px; /* Adjust font size for navigation on mobile */
+      }
+
+      .hero {
+        flex-direction: column; /* Stack elements vertically on mobile */
+        align-items: center; /* Center align content */
+        padding: 20px; /* Reduce padding for mobile */
+      }
+
+      .hero-content {
+        max-width: 90%; /* Allow content to use more space on mobile */
+        text-align: center; /* Center text */
+      }
+
+      .hero-content h1 {
+        font-size: 24px; /* Smaller font for headings on mobile */
+      }
+
+      .hero-content p {
+        font-size: 16px; /* Smaller font for paragraph on mobile */
+      }
+
+      .hero-image img {
+        max-width: 100%; /* Make hero image responsive */
+      }
+
+      .hero-content form .form-row {
+        flex-direction: column; /* Stack form inputs on mobile */
+        gap: 5px; /* Reduce gap between inputs */
+      }
+
+      .hero-content form input,
+      .hero-content form textarea,
+      .hero-content form button {
+        width: 100%; /* Set inputs to full width */
+      }
+
+      .brands-container {
+        display: flex;
+        flex-wrap: wrap; /* Allow brands to wrap on smaller screens */
+        justify-content: center; /* Center align brands */
+      }
+
+      .brands-container img {
+        width: 80px; /* Adjust brand logo sizes on mobile */
+        height: auto; /* Maintain aspect ratio */
+      }
+    }
+  </style>
+</head>
 <body>
-  <!-- Header Section -->
-  <header class="header">
-    <div class="logo">
-      <img src="https://i.ibb.co/DgLP5Fq/logo.png" alt="ContiSpares Logo">
-    </div>
-   <!-- Navigation items -->
+
+<header>
+  <div class="logo">
+    <img src="https://i.ibb.co/DgLP5Fq/logo.png" alt="ContiSpares Logo">
+  </div>
+</header>
+
 <nav>
   <ul>
-    <li><a href="#home" class="nav-link">Home</a></li>
-    <li><a href="#about" class="nav-link">About</a></li>
-    <li><a href="#products" class="nav-link">Products</a></li>
-    <li><a href="#contact-us" class="nav-link">Contact Us</a></li>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#contact-us">Contact Us</a></li>
   </ul>
 </nav>
 
-
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h1>Welcome to ContiSpares</h1>
-      <p>Your trusted shop for new and second-hand car spares.Fill in this form. And we will get back to you</p>
-      <form class="hero-form" id="contactForm">
-         <div class="form-row">
-        <input type="text" name="firstname" id="firstName" placeholder="First Name" required autocomplete="given-name">
-        <input type="text" name="lastname" id="surname" placeholder="Surname" required autocomplete="family-name">
-    </div>
-    <div class="form-row">
-        <input type="tel" name="phone" id="phoneNumber" placeholder="Cell Number" required autocomplete="tel">
-        <input type="email" name="email" id="email" placeholder="Email" required autocomplete="email">
-    </div>
-        <div class="form-row">
-          <input type="text" name="vehicle" id="vehicleMakeModel" placeholder="Vehicle Make, Model" required>
-          <input type="text" name="year" id="carYear" placeholder="Car Year" required>
-        </div>
-        <textarea name="parts" id="vehiclePart" placeholder="Parts Required" rows="3" required></textarea>
-        <!-- Add id="submitForm" to the submit button -->
-        <button type="submit" id="submitForm">Send</button>
-      </form>
-
-    </div>
-    <div class="hero-image">
-      <img src="https://i.ibb.co/VTGsGPP/600x200-600x400.jpg/600x400" alt="Car Engine">
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="about" id="about">
-    <div class="about-container">
-      <div class="about-text">
-        <h2>About Us</h2>
-        <p>
-          Welcome to <strong>ContiSpares</strong>, your trusted partner for quality automotive spares.
-        </p>
-        <p>
-          We specialize in providing a comprehensive range of <strong>new and second-hand car parts</strong> to meet the needs of car enthusiasts, repair specialists, and everyday drivers. With years of experience in the automotive industry, we pride ourselves on delivering exceptional service and unmatched quality in every part we supply.
-        </p>
-        <h3>Why Choose ContiSpares?</h3>
-        <ul>
-          <li>✅ <strong>Wide Selection:</strong> Whether you're looking for rare, hard-to-find spares or common parts, we’ve got you covered.</li>
-          <li>✅ <strong>Affordable Pricing:</strong> Premium spares at competitive prices for all budgets.</li>
-          <li>✅ <strong>Expert Assistance:</strong> Our team is here to help you find exactly what you need for your vehicle.</li>
-        </ul>
-        <h3>Our Mission</h3>
-        <p>
-          At <strong>ContiSpares</strong>, we aim to revolutionize how people source car parts by offering a seamless shopping experience. Our mission is to build lasting relationships by ensuring every interaction is smooth, efficient, and reliable.
-        </p>
-        <h3>Sustainability Commitment</h3>
-        <p>
-          By providing high-quality second-hand parts, we help reduce automotive waste and contribute to a sustainable future.
-        </p>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Welcome to ContiSpares</h1>
+    <p>Your trusted shop for new and second-hand car spares. Fill in this form and we will get back to you:</p>
+    <form id="contactForm">
+      <div class="form-row">
+        <input type="text" name="firstname" placeholder="First Name" required>
+        <input type="text" name="lastname" placeholder="Surname" required>
       </div>
-      <div class="about-image">
-        <img src="https://i.ibb.co/p404HLV/employees.jpg" alt="About ContiSpares">
+      <div class="form-row">
+        <input type="tel" name="phone" placeholder="Cell Number" required>
+        <input type="email" name="email" placeholder="Email" required>
       </div>
-    </div>
-  </section>
-
-  <!-- Products Section -->
-  <section class="products" id="products">
-    <h2>Our Products</h2>
-    <p>Browse through our range of vehicles available for parts or full sale.</p>
-    <div class="products-container">
-      <div class="filter-options">
-      <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search for products">
-        <button onclick="searchProducts()">Search</button>
+      <div class="form-row">
+        <input type="text" name="vehicle" placeholder="Vehicle Make, Model" required>
+        <input type="text" name="year" placeholder="Car Year" required>
       </div>
-      </div>
-      </div>
-      <!-- Example Product Card -->
-      <div class="product-card" onclick="showProductDetails('Detailed info about Datsun Go', ['https://i.ibb.co/S5Dxxy2/whitedg1.jpg', 'https://i.ibb.co/M68gvZ2/whitedg2.jpg','https://i.ibb.co/qx4CLTR/whitedg3.jpg'],
-  'Datsun Go for Sale – Runner. Selling a Datsun Go in good running condition. Perfect for everyday use or as a reliable budget car.Visit us at Conti Spares, 18 Sydney Road, to view the vehicle.Contact us today for more details or to arrange a test drive. Don’t miss this deal! '
-)">
-        <img src="https://i.ibb.co/R3MBC3y/whitedgruncover.jpg" alt=" Datsun Go">
-        <h3>Datsun Go</h3>
-        <p><strong>Status:</strong> Runner, Selling complete</p>
-      </div>
-      <div class="product-card" onclick="showProductDetails('Detailed info about Hyundai I10', ['https://i.ibb.co/TrbtYG1/hi101.jpg', 'https://i.ibb.co/G7YgHND/hi102.jpg','https://i.ibb.co/Dr6gdVV/hi103.jpg'],
-  'We are stripping a Hyundai i10 for spares at Conti Spares. All parts are in good condition and ready for sale. Visit us at 18 Sydney Road to find the parts you need. Stock is selling fast, so don’t miss out!Contact us today to check availability. Quality spares at affordable prices! '
-)">
-        <img src="https://i.ibb.co/2SwjQ3x/IMG-20241120-WA0044.jpg" alt="Hyundai i10">
-        <h3>Hyundai I10</h3>
-        <p><strong>Status:</strong> Stripping for parts</p>
-      </div>
-
-      <div class="product-card" onclick="showProductDetails('Detailed info about Renault Kwid Climber', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
-  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
-)">
-        <img src="https://i.ibb.co/MMKCv8H/climber.jpg" alt="Renault Kwid Climber">
-        <h3>Renault Kwid Climber</h3>
-        <p><strong>Status:</strong> Stripping for parts</p>
-      </div>
-      <div class="product-card" onclick="showProductDetails('Detailed info about Datsun Go', ['https://i.ibb.co/9sjQ9SX/greydat1.jpg', 'https://i.ibb.co/QDdRvCH/greydat2.jpg','https://i.ibb.co/9T76W0Z/greydat3.jpg'],
-  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
-)">
-        <img src="https://i.ibb.co/KyZRvFP/IMG-20241120-WA0047.jpg" alt="Datsun Go">
-        <h3>Datsun Go</h3>
-        <p><strong>Status:</strong> Stripping for parts</p>
-      </div>
-      <div class="product-card" onclick="showProductDetails('Detailed info about Datsun Go', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
-  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
-)">
-        <img src="https://i.ibb.co/Sm0v0q6/IMG-20241120-WA0048.jpg" alt="Datsun Go">
-        <h3>Datsun Go</h3>
-        <p>Status: Stripping for parts</p>
-      </div>
-      <div class="product-card" onclick="showProductDetails('Detailed info about Renault Kwid', ['https://i.ibb.co/f1WYSQK/kwid1.jpg', 'https://i.ibb.co/pv9v665/kwid2.jpg','https://i.ibb.co/4Z3wn8j/kwid3.jpg'],
-  'We’re stripping a Renault Kwid for parts at Conti Spares! Need something specific? From engine parts to body panels and interiors, we’ve got what you’re looking for to keep your Kwid running smoothly. '
-)">
-        <img src="https://i.ibb.co/jTfQn5N/IMG-20241120-WA0049.jpg" alt="Renault Kwid">
-        <h3>Renault Kwid</h3>
-        <p><strong>Status:</strong> Stripping for parts</p>
-      </div>
-      <div class="product-card" onclick="showProductDetails('Detailed info about Honda Civic Sedan', ['https://i.ibb.co/CVgSKTx/honda1.jpg', 'https://i.ibb.co/yk6RjkV/honda2.jpg','https://i.ibb.co/wMRpMCC/honda3.jpg'],
-  'For Sale: Honda Civic Sedan Parts at Conti Spares! We are currently stripping a Honda Civic Sedan for parts. Whether you need body panels, interior parts, or any specific spare parts, we have a variety of quality items available.Location: Conti Spares, 18 Sydney Road.Reach out for pricing and availability of parts. Get top-quality Honda Civic spares at affordable prices!'
-)">
-        <img src="https://via.placeholder.com/300x200" alt="Honda Civic">
-        <h3>Honda Civic Sedan</h3>
-        <p><strong>Status:</strong> Stripping for parts</p>
-      </div>
-      <div class="product-card" onclick="showProductDetails('Detailed info about Hyundai I10', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
-  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
-)">
-        <img src="https://i.ibb.co/3cs9n98/oldi10.jpg" alt="Hyundai i10">
-        <h3>Hyundai I10</h3>
-        <p><strong>Status:</strong> Stripping for parts</p>
-      </div>
-      <div class="product-card" onclick="showProductDetails('Detailed info about Opel Corsa', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
-  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
-)">
-        <img src="https://via.placeholder.com/300x200" alt="Opel Corsa">
-        <h3>Opel Corsa</h3>
-        <p><strong>Status:</strong> Stripping for parts</p>
-      </div>
-     <div class="product-card" onclick="showProductDetails('Detailed info about Datsun Go', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
-  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
-)">
-        <img src="https://i.ibb.co/KqWZ4Bj/datsungo1.jpg" alt="Datsun Go">
-        <h3>Datsun Go</h3>
-        <p><strong>Status:</strong> Stripping for parts</p>
-      </div>
-     <div class="product-card" onclick="showProductDetails(
-  'Detailed info about Mercedes-Benz B180', 
-  [
-    'https://i.ibb.co/MPPJPrh/b180-1.jpg', 
-    'https://i.ibb.co/HtgcY1F/b180-2.jpg',
-    'https://i.ibb.co/k8HNTW3/b180-3.jpg',
-    'https://i.ibb.co/8gFrMYv/benz-4.jpg',
-    'https://i.ibb.co/Z1hyJSd/benz-5.jpg'
-  ],
-'Searching for Mercedes B180 spares? Conti Spares has exactly what you need! Premium parts at affordable prices, ready for you.Get in touch with us today.Don’t wait call now and secure your Mercedes spares!'
-)">
-    <img src="https://i.ibb.co/sqgWd4w/mercedes-B180.jpg" alt="Mercedes-Benz B180">
-    <h3>Mercedes-Benz B180</h3>
-    <p><strong>Status:</strong> Stripping for parts</p>
-</div>
-
-     <div class="product-card" onclick="showProductDetails('Detailed info about Nissan Almera', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
-  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
-)">
-        <img src="https://i.ibb.co/StVn39J/almera.jpg" alt="Nissan Almera">
-        <h3>Nissan Almera</h3>
-        <p><strong>Status:</strong> Stripping for parts</p>
-      </div>
-      <div class="product-card" onclick="showProductDetails('Detailed info about Chevrolet Cruze', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
-  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
-)">
-        <img src="https://i.ibb.co/SfpqztB/cruze.jpg" alt="Chevrolet Cruze">
-        <h3>Chevrolet Cruze</h3>
-        <p><strong>Status:</strong> Stripping for parts</p>
-      </div>
-      <div class="product-card" onclick="showProductDetails('Detailed info about Ford Focus ST', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
-  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
-)">
-        <img src="https://i.ibb.co/9qVxsNK/focus-st-3.jpg" alt="Ford Focus ST">
-        <h3>Ford Focus ST</h3>
-        <p><strong>Status:</strong> Stripping for parts</p>
-      </div>
-     <div class="product-card" onclick="showProductDetails('Detailed info about BMW 320i', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
-  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
-)">
-        <img src="https://i.ibb.co/58jc6wP/BMW320-I-4.jpg" alt="BMW 320i">
-        <h3>BMW 320i</h3>
-        <p><strong>Status:</strong> Stripping for parts</p>
-      </div>
-      <div id="productModal" class="modal">
-        <div class="modal-content">
-          <span class="close-button" onclick="closeModal()">&times;</span>
-          <div id="modalDetails"></div>
-        </div>
-      </div>
-    </div
-</div>
-    </div>
-      <div id="pagination" class="pagination"></div>
-  </section>
-
-
-<!-- Contact Us Section -->
-<section class="contact-us" id="contact-us">
-  <h2>Contact Us</h2>
-  <p>We'd love to hear from you! </p>
-
- <div class="contact-card">
-  <h3>Call Us Now!</h3>
-  <div>
-    <a href="tel:27767802386"><i class="fas fa-phone" style="color: blue;"></i> +27 76 780 2386</a>
-    <a href="tel:27828151732"><i class="fas fa-phone" style="color: green;"></i> +27 82 815 1732</a>
+      <textarea name="parts" placeholder="Parts Required" rows="3" required></textarea>
+      <button type="submit">Send</button>
+    </form>
   </div>
-</div>
-
-  <div class="contact-card">
-    <h3>Find Us Here!</h3>
-    <p><a href="https://www.google.com/maps?q=18 Sydney Rd Greyville, Berea, 4001" target="_blank">18 Sydney Rd Greyville, Berea, 4001</a></p>
-
-    <div class="map-container">
-      
-      <iframe src="https://www.google.com/maps/embed/v1/place?q=Conti+Spares&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" style="border:0" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-  </div>
-
-  <div class="contact-card">
-    <h3>Check Out Our Social Media</h3>
-    <div class="social-media-links">
-      <a href="https://www.facebook.com/profile.php?id=61565620319486" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-facebook-f"></i> <!-- Font Awesome Facebook Icon -->
-      </a>
-      <a href="https://www.instagram.com/conti.spares/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-instagram"></i> <!-- Font Awesome Instagram Icon -->
-      </a>
-    </div>
+  <div class="hero-image">
+    <img src="https://i.ibb.co/3SpcfWn/Pngtree-detailed-3d-model-of-car-16185945.png" alt="Car Engine">
   </div>
 </section>
 
-
-    <!-- Customer Reviews Section -->
-<section class="reviews" id="reviews">
-    <h2>What Our Customers Say</h2>
-    <div class="reviews-carousel">
-        <button class="nav-button" id="prevButton">&#9664;</button>
-        <div class="reviews-container" id="reviewsContainer">
-            <!-- Reviews will be injected here -->
-        </div>
-        <button class="nav-button" id="nextButton">&#9654;</button>
-    </div>
-    <button id="reviewButton" onclick="redirectToGoogleReviews()">Review Us on Google</button>
+<section class="brands">
+  <h2>Our Main Brands</h2>
+  <div class="brands-container">
+    <img src="https://i.ibb.co/XYdfKsX/5ec3e1ee58550c0004427739.png" alt="Brand 1">
+    <img src="https://i.ibb.co/LP6kZ9t/62015ceb40d2700004f23850.png" alt="Brand 2">
+    <img src="https://i.ibb.co/HGvYdZy/580b57fcd9996e24bc43c49c.png" alt="Brand 3">
+    <img src="https://i.ibb.co/dkKhqbk/580b57fcd9996e24bc43c497.png" alt="Brand 4">
+    <img src="https://i.ibb.co/zZ9g3w9/5ec3e2db58550c0004427740.png" alt="Brand 5">
+    <img src="https://i.ibb.co/GdcPFm9/5ec3e30358550c0004427741.png" alt="Brand 6">
+    <img src="https://i.ibb.co/RT7pWNp/580b57fcd9996e24bc43c482.png" alt="Brand 7">
+    <img src="https://i.ibb.co/M2JBvrJ/5ec3e3f358550c0004427748.png" alt="Brand 8">
+    <img src="https://i.ibb.co/NT2XsBq/gwm-seeklogo.png" alt="Brand 9">
+    <img src="https://i.ibb.co/F8NkH0C/kisspng-datsun-510-car-datsun-redi-go-nissan-infiniti-war-5b1509d53ffa80-7431001715281054292621.png" alt="Brand 10">
+    <img src="https://i.ibb.co/StPVtMk/580b57fcd9996e24bc43c479.png" alt="Brand 11">
+    <img src="https://i.ibb.co/qBMbzRQ/BMW.png" alt="Brand 12">
+    <img src="https://i.ibb.co/kK2kn21/580b57fcd9996e24bc43c47c.png" alt="Brand 13">
+    <img src="https://i.ibb.co/9Z8HyM2/580b57fcd9996e24bc43c4a5.png" alt="Brand 14"> 
+    <img src="https://i.ibb.co/KxNkdHH/580b57fcd9996e24bc43c499.png" alt="Brand 15">
+    <img src="https://i.ibb.co/R7r9zVY/5ec3e46558550c000442774b.png" alt="Brand 16">
+    <img src="https://i.ibb.co/L6Wvqyk/580b57fcd9996e24bc43c47a.png" alt="Brand 17">
+    <img src="https://i.ibb.co/51V0jyB/580b585b2edbce24c47b2c5e.png" alt="Brand 18">
+    <img src="https://i.ibb.co/dJ3xbYV/580b57fcd9996e24bc43c488.png" alt="Brand 19">
+    <img src="https://i.ibb.co/zf9tcxd/638e307b3eae41f3706b4076.png" alt="Brand 20">
+    <img src="https://i.ibb.co/FXB38Dz/5ec3e25258550c000442773c.png" alt="Brand 21">
+    <img src="https://i.ibb.co/hm4MsJ8/58482340cef1014c0b5e49bf.png" alt="Brand 22">
+  </div>
 </section>
 
-  <!-- Featured Brands -->
-  <section class="brands">
-    <h2>Our Main Brands</h2>
-    <div class="brands-container">
-      <img src="https://i.ibb.co/XYdfKsX/5ec3e1ee58550c0004427739.png" alt="Brand 1">
-      <img src="https://i.ibb.co/LP6kZ9t/62015ceb40d2700004f23850.png" alt="Brand 2">
-      <img src="https://i.ibb.co/HGvYdZy/580b57fcd9996e24bc43c49c.png" alt="Brand 3">
-      <img src="https://i.ibb.co/dkKhqbk/580b57fcd9996e24bc43c497.png" alt="Brand 4">
-      <img src="https://i.ibb.co/zZ9g3w9/5ec3e2db58550c0004427740.png" alt="Brand 5">
-      <img src="https://i.ibb.co/GdcPFm9/5ec3e30358550c0004427741.png" alt="Brand 6">
-      <img src="https://i.ibb.co/RT7pWNp/580b57fcd9996e24bc43c482.png" alt="Brand 7">
-      <img src="https://i.ibb.co/M2JBvrJ/5ec3e3f358550c0004427748.png" alt="Brand 8">
-      <img src="https://i.ibb.co/NT2XsBq/gwm-seeklogo.png" alt="Brand 9">
-      <img src="https://i.ibb.co/F8NkH0C/kisspng-datsun-510-car-datsun-redi-go-nissan-infiniti-war-5b1509d53ffa80-7431001715281054292621.png" alt="Brand 10">
-      <img src="https://i.ibb.co/StPVtMk/580b57fcd9996e24bc43c479.png" alt="Brand 11">
-      <img src="https://i.ibb.co/qBMbzRQ/BMW.png" alt="Brand 12">
-      <img src="https://i.ibb.co/kK2kn21/580b57fcd9996e24bc43c47c.png" alt="Brand 13">
-      <img src="https://i.ibb.co/9Z8HyM2/580b57fcd9996e24bc43c4a5.png" alt="Brand 14"> 
-      <img src="https://i.ibb.co/KxNkdHH/580b57fcd9996e24bc43c499.png" alt="Brand 15">
-      <img src="https://i.ibb.co/R7r9zVY/5ec3e46558550c000442774b.png" alt="Brand 16">
-      <img src="https://i.ibb.co/L6Wvqyk/580b57fcd9996e24bc43c47a.png" alt="Brand 17">
-      <img src="https://i.ibb.co/51V0jyB/580b585b2edbce24c47b2c5e.png" alt="Brand 18">
-      <img src="https://i.ibb.co/dJ3xbYV/580b57fcd9996e24bc43c488.png" alt="Brand 19">
-      <img src="https://i.ibb.co/zf9tcxd/638e307b3eae41f3706b4076.png" alt="Brand 20">
-      <img src="https://i.ibb.co/FXB38Dz/5ec3e25258550c000442773c.png" alt="Brand 21">
-      <img src="https://i.ibb.co/hm4MsJ8/58482340cef1014c0b5e49bf.png" alt="Brand 22">
-    </div>
-  </section>
-  
-    <div id="productModal" class="modal">
-    <div class="modal-content">
-      <span class="close-button" onclick="closeModal()">&times;</span>
-      <div id="modalDetails"></div>
-    </div>
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button" onclick="closeModal()">&times;</span>
+    <div id="modalDetails"></div>
   </div>
+</div>
 
-  <!-- Footer Section -->
-  <!-- Footer Section -->
 <footer class="footer">
   <div class="footer-content">
+    <h2>Your Source for Second Hand Cars and Quality Second Hand Parts</h2>
     <p>© 2024 CONTI SPARES. All rights reserved.</p>
     <div class="developer-info">
       <p>Developed by <a href="https://www.linkedin.com/in/muhammed-azhar-syed-1bb0742b7/" target="_blank" rel="noopener noreferrer">Muhammed Azhar</a></p>
@@ -329,8 +314,7 @@
     </div>
   </div>
 </footer>
-
-
+  
   <!-- JavaScript for Form -->
   <script>
     
@@ -363,191 +347,6 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     window.open(whatsappUrl, '_blank');
 });
 
-    // Initialize pagination on DOM content loaded
-    document.addEventListener("DOMContentLoaded", function() {
-      paginateProducts(); // Initialize pagination
-    });
-
-    function paginateProducts() {
-      const products = document.querySelectorAll(".product-card");
-      const perPage = 6; // Number of products per page
-      const totalPages = Math.ceil(products.length / perPage);
-      const pagination = document.getElementById("pagination");
-      pagination.innerHTML = ""; // Clear previous pagination
-
-      for (let i = 1; i <= totalPages; i++) {
-        const button = document.createElement("button");
-        button.textContent = i;
-        button.classList.add("pagination-button");
-        button.onclick = () => showPage(i, perPage); // Attach click event
-        pagination.appendChild(button);
-      }
-      showPage(1, perPage); // Show the first page by default
-    }
-
-    function showPage(page, perPage) {
-    const products = document.querySelectorAll(".product-card");
-    products.forEach((product, index) => {
-        product.style.display =
-            index >= (page - 1) * perPage && index < page * perPage ? "block" : "none";
-    });
-
-    // Remove or comment out this part to prevent automatic scrolling
-    /*
-    const firstProduct = products[(page - 1) * perPage];
-    if (firstProduct) {
-        firstProduct.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-    */
-
-    // Update active pagination button
-    const buttons = document.querySelectorAll(".pagination-button");
-    buttons.forEach((button, index) => {
-        button.classList.toggle("active", index + 1 === page);
-    });
-}
-
-
-    function searchProducts() {
-      const input = document.getElementById("searchInput").value.toLowerCase();
-      const products = document.querySelectorAll(".product-card");
-      products.forEach((product) => {
-        const productName = product.querySelector("h3").textContent.toLowerCase();
-        product.style.display = productName.includes(input) ? "block" : "none";
-      });
-    }
-
-    
-  function showProductDetails(productName, images, description) {
-    const modal = document.getElementById("productModal");
-    const modalDetails = document.getElementById("modalDetails");
-
-    // Ensure images is an array and not empty
-    if (!images || images.length === 0) {
-        alert("No images available for this product.");
-        return;
-    }
-
-    // Create image gallery HTML
-    const imageGallery = images.map(img => `
-        <img src="${img}" alt="${productName}" style="max-width: 100%; margin: 5px;">
-    `).join("");
-
-    // Set modal content
-    modalDetails.innerHTML = `
-        <h2>${productName}</h2>
-        <div>${imageGallery}</div>
-        <p>${description}</p>
-        <button onclick="closeModal()">Close</button>
-    `;
-    
-    // Display modal
-    modal.style.display = "flex";
-
-    // Disable background scrolling
-    document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-    const modal = document.getElementById("productModal");
-    modal.style.display = "none";
-
-    // Re-enable background scrolling
-    document.body.style.overflow = 'auto';
-}
-    
-    document.getElementById("searchInput").addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault(); // Prevent default form submission
-    searchProducts(); // Call your search function
-  }
-});
-
-    // Function to fetch Google Reviews
- let currentIndex = 0;
-let reviewInterval;
-
-async function fetchGoogleReviews() {
-    const placeId = 'ChIJbVM_Ozup9x4R8cAK5F16Fr8'; // Your actual Place ID
-    const response = await fetch(`http://localhost:3000/api/reviews/${placeId}`);
-    const data = await response.json();
-
-    if (data.status === "OK" && data.result.reviews) {
-        const reviewsContainer = document.getElementById('reviewsContainer');
-        reviewsContainer.innerHTML = ''; // Clear previous content
-
-        // Shuffle the reviews array
-        const reviews = data.result.reviews.sort(() => Math.random() - 0.5);
-
-        reviews.forEach(review => {
-            const reviewElement = document.createElement('div');
-            reviewElement.className = 'review';
-            reviewElement.innerHTML = `
-                <p>“${review.text}”</p>
-                <span>— ${review.author_name}</span>
-            `;
-            reviewsContainer.appendChild(reviewElement);
-        });
-
-        // Update carousel
-        updateCarouselPosition(0);
-
-        // Start the slideshow
-        startSlideshow(reviews.length);
-    } else {
-        console.error('Error fetching reviews:', data.status);
-    }
-}
-
-function updateCarouselPosition(index) {
-    const reviews = document.querySelectorAll('.review');
-    const totalReviews = reviews.length;
-
-    const containerWidth = reviews[0].clientWidth; // width of a single review
-    const offset = index * containerWidth; // calculate the offset based on index
-
-    document.getElementById('reviewsContainer').style.transform = `translateX(-${offset}px)`;
-
-    // Set button visibility
-    document.getElementById('prevButton').style.display = index > 0 ? 'block' : 'none';
-    document.getElementById('nextButton').style.display = index < totalReviews - 1 ? 'block' : 'none';
-}
-
-function startSlideshow(totalReviews) {
-    reviewInterval = setInterval(() => {
-        if (currentIndex < totalReviews - 1) {
-            currentIndex++;
-        } else {
-            currentIndex = 0; // Loop back to the start
-        }
-        updateCarouselPosition(currentIndex);
-    }, 5000); // Change slide every 5 seconds
-}
-
-// Event listeners for navigation buttons
-document.getElementById('prevButton').onclick = () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateCarouselPosition(currentIndex);
-    }
-};
-
-document.getElementById('nextButton').onclick = () => {
-    const totalReviews = document.querySelectorAll('.review').length;
-    if (currentIndex < totalReviews - 1) {
-        currentIndex++;
-        updateCarouselPosition(currentIndex);
-    }
-};
-
-// Redirect to Google Reviews function
-function redirectToGoogleReviews() {
-    const googleReviewUrl = "https://search.google.com/local/writereview?placeid=ChIJbVM_Ozup9x4R8cAK5F16Fr8"; // Replace with your actual Place ID
-    window.open(googleReviewUrl, '_blank');
-}
-
-// Fetch reviews on load
-window.onload = fetchGoogleReviews;
 
   </script>
 </body>
