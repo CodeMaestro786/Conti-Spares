@@ -247,18 +247,18 @@
     <p>Your trusted shop for new and second-hand car spares. Fill in this form and we will get back to you:</p>
     <form id="contactForm">
       <div class="form-row">
-        <input type="text" name="firstname" placeholder="First Name" required>
-        <input type="text" name="lastname" placeholder="Surname" required>
+        <input type="text" id="firstName" name="firstname" placeholder="First Name" required>
+        <input type="text" id="surname" name="lastname" placeholder="Surname" required>
       </div>
       <div class="form-row">
-        <input type="tel" name="phone" placeholder="Cell Number" required>
-        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" id="phoneNumber" name="phone" placeholder="Cell Number" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
       </div>
       <div class="form-row">
-        <input type="text" name="vehicle" placeholder="Vehicle Make, Model" required>
-        <input type="text" name="year" placeholder="Car Year" required>
+        <input type="text" id="vehicleMakeModel" name="vehicle" placeholder="Vehicle Make, Model" required>
+        <input type="text" id="carYear" name="year" placeholder="Car Year" required>
       </div>
-      <textarea name="parts" placeholder="Parts Required" rows="3" required></textarea>
+      <textarea id="vehiclePart" name="parts" placeholder="Parts Required" rows="3" required></textarea>
       <button type="submit">Send</button>
     </form>
   </div>
@@ -316,39 +316,36 @@
 </footer>
   
   <!-- JavaScript for Form -->
- <script>
-    
-    // Add this event listener to handle form submission
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the default form submission
+<script>
+  // Add this event listener to handle form submission
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the default form submission
 
-    // Gather form data
-    const firstName = document.getElementById("firstName").value;
-    const surname = document.getElementById("surname").value;
-    const phoneNumber = document.getElementById("phoneNumber").value;
-    const email = document.getElementById("email").value;
-    const vehicle = document.getElementById("vehicleMakeModel").value;
-    const year = document.getElementById("carYear").value;
-    const partsRequired = document.getElementById("vehiclePart").value;
+      // Gather form data
+      const firstName = document.getElementById("firstName").value;
+      const surname = document.getElementById("surname").value;
+      const phoneNumber = document.getElementById("phoneNumber").value;
+      const email = document.getElementById("email").value;
+      const vehicle = document.getElementById("vehicleMakeModel").value;
+      const year = document.getElementById("carYear").value;
+      const partsRequired = document.getElementById("vehiclePart").value;
 
-    // Construct the message to be sent via WhatsApp
-    const message = `Hello Conti Spares, I am interested in car parts. Here are my details:\n\n` +
-                    `*Name:* ${firstName} ${surname}\n` +
-                    `*Phone Number:* ${phoneNumber}\n` +
-                    `*Email:* ${email}\n` +
-                    `*Vehicle:* ${vehicle} (${year})\n` +
-                    `*Parts Required:* ${partsRequired}`;
+      // Construct the message to be sent via WhatsApp
+      const message = `Hello Conti Spares, I am interested in car parts. Here are my details:\n\n` +
+                      `*Name:* ${firstName} ${surname}\n` +
+                      `*Phone Number:* ${phoneNumber}\n` +
+                      `*Email:* ${email}\n` +
+                      `*Vehicle:* ${vehicle} (${year})\n` +
+                      `*Parts Required:* ${partsRequired}`;
 
-    // Replace "<YOUR_PHONE_NUMBER>" with your actual WhatsApp number in international format
-    const whatsappNumber = "27642152212"; // e.g., "27767802386"
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
+      // Replace "<YOUR_PHONE_NUMBER>" with your actual WhatsApp number in international format
+      const whatsappNumber = "27642152212"; // e.g., "27767802386"
+      const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
 
-    // Redirect to WhatsApp
-    window.open(whatsappUrl, '_blank');
-});
-
-
-  </script>
+      // Redirect to WhatsApp
+      window.open(whatsappUrl, '_blank');
+  });
+</script>
 </body>
 
 </html>
