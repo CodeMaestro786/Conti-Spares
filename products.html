@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find high-quality new and used car spare parts at Conti Spares. Affordable prices and wide selection.">
+  <title>Buy Cheap and Quality Car Spare Parts at Conti Spares</title>
+  <link rel="icon" href="img/icon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #676767;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 10px;
+      background-color: #000000;
+      border-bottom: 1px solid #ff0000;
+    }
+
+    header .logo img {
+      max-width: 500px;
+      height: auto;
+    }
+
+    nav {
+      background-color: #ff0000;
+      padding: 20px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-weight: 600;
+      font-size: 30px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffffff;
+    }
+
+    .search-bar input {
+  width: 300px;
+  padding: 10px;
+  margin-right: 5px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+.search-bar button {
+  padding: 10px 15px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+    .products, .individual-products-section {
+      padding: 20px;
+    }
+
+    .product-card {
+      background-color: #676767;
+      color: #676767;
+      padding: 10px;
+      border-radius: 5px;
+      margin: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%; 
+      max-width: 300px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #000000;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 15px;
+    }
+
+    footer a {
+      color: #2d6fff;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Media queries for responsiveness */
+    @media (max-width: 768px) {
+      nav ul li a {
+        font-size: 20px;
+      }
+
+      .product-card {
+        max-width: 100%;
+      }
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      width: 100%;
+      max-height: 80vh; /* Limit the height of the modal */
+      overflow-y: auto; /* Allow scrolling */
+      position: relative; /* Keep the content relative inside */
+    }
+
+    .modal-content img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #333;
+    }
+.modal-content button {
+  background-color: red;
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center; /* Center the pagination buttons */
+  margin: 30px 0; /* Spacing around the pagination */
+}
+
+.pagination-button {
+  background-color: black; /* Button background */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Padding */
+  margin: 0 5px; /* Spacing between buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Transition for hover effects */
+}
+
+.pagination-button:hover {
+  background-color: #444; /* Darker background on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.pagination-button:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+/* Active Page Style */
+.pagination-button.active {
+  background-color: #ff0000; /* Highlight color for the active page */
+}
+
+/* Flexbox for filter options */
+.filter-options {
+  display: flex;
+  justify-content: space-between; /* Space the items evenly */
+  align-items: center; /* Center vertically */
+  margin: 20px 0; /* Margin around the filter options */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Search Bar Styles */
+.search-bar {
+  display: flex; /* Allow aligning input and button */
+  flex-grow: 1; /* Make it take available space */
+  max-width: 300px; /* Set a max width for the search bar */
+  margin-right: 10px; /* Space between search and sort */
+}
+
+.search-bar input {
+  width: 100%; /* Full width of the parent */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Sort Options Styles */
+.sort-options {
+  min-width: 150px; /* Minimum width for the select box */
+}
+
+.sort-options select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Products Section */
+.products {
+  padding: 40px 20px;
+  background-color: #676767;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ff0000;
+}
+
+.products p {
+  font-size: 25px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.products-container {
+   display: grid; /* Ensure this is set to grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* This should maintain multiple cards per row */
+    gap: 20px; /* Space between cards */
+}
+
+.product-card {
+  background-color: #fffefe;
+  border: 1px solid #ff0000;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background-color: #fefefe;
+}
+
+.product-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+ .filter-options {
+    display: flex;
+    justify-content: space-between; /* Space evenly distributes the filter options */
+    align-items: center; 
+    margin: 20px 0;
+    flex-wrap: wrap; /* Allow wrapping onto a new line if necessary */
+}
+
+.search-bar {
+    flex: 1; /* Allow this component to grow */
+    max-width: 300px; /* Set max width */
+    margin-right: 10px; /* Add space between search and sort */
+}
+
+.sort-options {
+    min-width: 150px; /* Minimum width for select */
+}
+
+}
+
+
+.individual-products-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.individual-product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+}
+
+.individual-product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.individual-product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.individual-product-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.individual-product-card p {
+    margin: 5px 0;
+}
+
+.individual-product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #000000;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="https://i.ibb.co/DgLP5Fq/logo.png" alt="ContiSpares Logo">
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="contact-us.html">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- Products Section -->
+<section class="products" id="products">
+    <h2>Our Products</h2>
+    <p>Browse through our range of vehicles available for parts or full sale.</p>
+    <div class="products-container">
+      <div class="filter-options">
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for products">
+        <button onclick="searchProducts()">Search</button>
+      </div>
+      </div>
+      </div>
+      <!-- Example Product Card -->
+    
+    <div class="product-card" onclick="showProductDetails('Detailed info about Toyota Twincam', ['https://i.ibb.co/G93WG7H/conquest1.jpg','https://i.ibb.co/kDrgZ8M/conquest2.jpg','https://i.ibb.co/dcrYT5K/conquest3.jpg'],
+  'We are stripping a Toyota Twincam for spares at Conti Spares. All parts are available for sale.Visit us at 18 Sydney Road to find the parts you need. Stock is limited, so act fast!Contact us today to check availability.Affordable prices on quality used spares! '
+)">
+        <img src="https://i.ibb.co/y6StBbX/conquestcover.jpg" alt="Toyota Twincam">
+        <h3>Toyota Twincam</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div> 
+      
+      
+    <div class="product-card" onclick="showProductDetails('Detailed info about Chevrolet Cruze (2011) Diesel', ['https://i.ibb.co/Yp0LqJZ/whitecruze1.jpg','https://i.ibb.co/hF4PCW5/whitecruze2.jpg','https://i.ibb.co/D5WT3gG/whitecruze3.jpg'],
+  'Selling a 2011 Chevrolet Cruze in running condition. The vehicle is being sold as a complete unit.Visit us at Conti Spares, 18 Sydney Road, to view the car.Contact us today for more details or to arrange a viewing.Great value don’t miss out! '
+)">
+        <img src="https://i.ibb.co/98c1Lh6/whitecruzecover.jpg" alt="Chevrolet Cruze (2011) Diesel">
+        <h3> Chevrolet Cruze (2011) Diesel</h3>
+        <p><strong>Status:</strong> Runner,Selling Complete </p>
+        <p><strong>Price:</strong> R43,000</p>
+      </div> 
+    
+    
+     <div class="product-card" onclick="showProductDetails('Detailed info about Renault Kwid', ['https://i.ibb.co/FmF40Sb/kwidwhite1.jpg','https://i.ibb.co/8sg2ZLm/kwidwhite2.jpg','https://i.ibb.co/DRGHB4N/kwidwhite3.jpg','https://i.ibb.co/4T8kb9J/kwidwhite4.jpg','https://i.ibb.co/m8KFs9Z/kwidwhite5.jpg'],
+  'Selling a Renault Kwid as a complete unit. The engine needs fixing, and the bumper is damaged but included with the car. Not being stripped.Visit us at Conti Spares, 18 Sydney Road, to view the vehicle.Contact us today for more information or to arrange a viewing. Don’t miss out! '
+)">
+        <img src="https://i.ibb.co/Z23NztV/kwidwhitecover.jpg" alt="Renault Kwid">
+        <h3> Renault Kwid</h3>
+        <p><strong>Status:</strong> Selling Complete </p>
+        <p><strong>Price:</strong> R37,000</p>
+      </div> 
+    
+    
+     <div class="product-card" onclick="showProductDetails('Detailed info about Corsa Utility Gamma', ['https://i.ibb.co/rFY2ZbT/corsa1.jpg','https://i.ibb.co/DzXy1Jd/corsa2.jpg','https://i.ibb.co/K0L5nCS/corsa3.jpg'],
+  'Selling a Corsa Utility Gamma with an engine that starts. The vehicle is being sold as a complete unit and not for stripping.Visit us at Conti  Spares, 18 Sydney Road, to view the vehicle.Contact us today for more details or to arrange a viewing. Don’t miss this opportunity! '
+)">
+        <img src="https://i.ibb.co/6Df6Kyv/corsacover.jpg" alt="Corsa Utility Gamma">
+        <h3>Corsa Utility Gamma</h3>
+        <p><strong>Status:</strong> Selling Complete </p>
+        <p><strong>Price:</strong> R25,000</p>
+      </div> 
+    
+     <div class="product-card" onclick="showProductDetails('Detailed info about Ford Fiesta (2010)', ['https://i.ibb.co/mcKtwbX/fiesta20101.jpg','https://i.ibb.co/64WnYD5/fiesta20102.jpg','https://i.ibb.co/5LbyKHr/fiesta20103.jpg'],
+  'We are stripping a 2010 Ford Fiesta for spares at Conti Spares. All parts are in good condition and ready for sale.Visit us at 18 Sydney Road to find the parts you need. Stock is selling fast!Contact us today to check availability. Quality used spares at great prices! '
+)">
+        <img src="https://i.ibb.co/GQyLMMm/fiesta2010cover.jpg" alt="Ford Fiesta (2010)">
+        <h3>Ford Fiesta (2010)</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div> 
+    
+     <div class="product-card" onclick="showProductDetails('Detailed info about Ford Fiesta (2008)', ['https://i.ibb.co/Mng4y5v/fordfiesta2008cover2.jpg','https://i.ibb.co/GRssVKC/fordfiesta20081.jpg','https://i.ibb.co/qgXVkxm/fordfiesta20083.jpg'],
+  'Selling a 2008 Ford Fiesta with an engine that starts. The car is being sold as a complete unit and not for stripping.Visit us at Conti Spares, 18 Sydney Road, to view the vehicle.Contact us today for more information or to arrange a viewing. Don’t miss out on this deal! '
+)">
+        <img src="https://i.ibb.co/bNQg2Rj/fordfeista2008cover.jpg" alt="Ford Fiesta (2008)">
+        <h3>Ford Fiesta (2008)</h3>
+        <p><strong>Status:</strong> Selling Complete </p>
+        <p><strong>Price:</strong> R37,000</p>
+      </div> 
+      
+    
+     <div class="product-card" onclick="showProductDetails('Detailed info about Audi A3', ['https://i.ibb.co/pWFHL5y/audia31.jpg','https://i.ibb.co/7WD0fvp/audia32.jpg','https://i.ibb.co/vZnNy5f/audia33.jpg'],
+  'Selling an Audi A3 with a starting engine. The vehicle can be sold complete.It is on limp mode.Visit us at Conti Spares, 18 Sydney Road, to view the vehicle or check parts availability.Contact us today for more details. Don’t miss out! '
+)">
+        <img src="https://i.ibb.co/TqDVV1k/audia3cov.jpg" alt="Audi A3">
+        <h3>Audi A3</h3>
+        <p><strong>Status:</strong> Selling Complete </p>
+        <p><strong>Price:</strong> R25,000</p>
+      </div> 
+      
+    
+        <div class="product-card" onclick="showProductDetails('Detailed info about Ford Figo', ['https://i.ibb.co/tMrR2TM/figo1.jpg','https://i.ibb.co/nmF9r1h/figo2.jpg','https://i.ibb.co/Vxtj0MX/figo3.jpg'],
+  'We are selling a Ford Figo complete at Conti Spares.Visit us at 18 Sydney Road to find the parts you need.Stock won’t last long! Contact us today to check availability.Quality used spares at affordable prices! '
+)">
+        <img src="https://i.ibb.co/z5xKDq6/figocover.jpg" alt="Ford Figo">
+        <h3>Ford Figo</h3>
+        <p><strong>Status:</strong> Selling Complete</p>
+        <p><strong>Price:</strong> R39,000</p>
+      </div> 
+      
+        <div class="product-card" onclick="showProductDetails('Detailed info about Chevrolet Spark', ['https://i.ibb.co/M1k0DVQ/spark1.jpg', 'https://i.ibb.co/wWsqWFc/spark2.jpg','https://i.ibb.co/3MSmd5g/spark3.jpg'],
+  'We are stripping a Chevrolet Spark for spares at Conti Spares.Visit us at 18 Sydney Road to find the parts you need.Stock won’t last long! Contact us today to check availability.Quality used spares at affordable prices! '
+)">
+        <img src="https://i.ibb.co/0yhS3Cn/sparkcover.jpg" alt="Chevrolet Spark">
+        <h3>Chevrolet Spark</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div> 
+      
+        <div class="product-card" onclick="showProductDetails('Detailed info about Mercedes Benz B200', ['https://i.ibb.co/QrpdpRH/b2001.jpg','https://i.ibb.co/PW0y8tf/b2002.jpg','https://i.ibb.co/xHZhB8p/b2003.jpg'],
+  'We are stripping a Mercedes Benz B200 for spares at Conti Spares.Visit us at 18 Sydney Road to find the parts you need.Stock won’t last long! Contact us today to check availability.Quality used spares at affordable prices! '
+)">
+        <img src="https://i.ibb.co/PTxFCFk/b200cover.jpg" alt="Mercedes Benz B200">
+        <h3>Mercedes Benz B200</h3>
+        <p><strong>Status:</strong> <span style="color: red; font-weight: bold;">Sold!</span></p>
+      </div> 
+          
+           <div class="product-card" onclick="showProductDetails('Detailed info about TATA Bakkie', ['https://i.ibb.co/m828f6T/tata1.jpg','https://i.ibb.co/pjGsFsx/tata2.jpg','https://i.ibb.co/F7JRLPj/tata3.jpg'],
+  'Selling a TATA 1 Ton Bakkie Complete. Reliable for work. Visit us at Conti Spares, 18 Sydney Road, to view the vehicle.Contact us today for more details or to arrange a viewing. A great deal for work or personal use! '
+)">
+        <img src="https://i.ibb.co/4N88s64/tatacover.jpg" alt="TATA BAKKIE">
+        <h3>TATA Bakkie</h3>
+        <p><strong>Status:</strong> <span style="color: red; font-weight: bold;">Sold!</span></p>
+      </div>
+      
+          <div class="product-card" onclick="showProductDetails('Detailed info about Ford Icon', ['https://i.ibb.co/yYp3Y17/icon1.jpg','https://i.ibb.co/JCkNpsv/icon2.jpg','https://i.ibb.co/RPWqrZw/icon-3.jpg'],
+  'Selling a Ford Icon in complete and running condition. Reliable and ready to drive.Visit us at Conti Spares, 18 Sydney Road, to view the vehicle.Contact us today for more information or to arrange a viewing.Don’t miss out! '
+)">
+        <img src="https://i.ibb.co/RBgmj8V/icon-cover.jpg" alt="Ford Icon">
+        <h3>Ford Icon</h3>
+        <p><strong>Status:</strong> Starts, selling complete!</p>
+        <p><strong>Price:</strong> R49,990</p>
+      </div>
+      
+      
+          <div class="product-card" onclick="showProductDetails('Detailed info about Hyundai i30', ['https://i.ibb.co/y40ZcQt/i30white1.jpg','https://i.ibb.co/9nDTC9h/i30white2.jpg','https://i.ibb.co/2ZgLzj2/i30white3.jpg'],
+  '2010 Hyundai i30 2.0 for Sale – Code 3.Selling a 2010 Hyundai i30 2.0 (Code 3). The car is a runner.Visit us at Conti Spares, 18 Sydney Road, to view the vehicle.Contact us today for more details. First come, first served! '
+)">
+        <img src="https://i.ibb.co/Gd2Nm43/i30whitecover.jpg" alt="Hyundai i30 (2010)">
+        <h3>Hyundai i30 (2010)</h3>
+        <p><strong>Status:</strong> Runner, Selling complete</p>
+        <p><strong>Price:</strong> R65,000</p>
+      </div>
+      <div class="product-card" onclick="showProductDetails('Detailed info about Datsun Go+ (2020)', ['https://i.ibb.co/3pp8KXc/datsungo-red1.jpg', 'https://i.ibb.co/vBMV2bY/datsungo-red2.jpg', 'https://i.ibb.co/6wMkRSg/datsungo-red3.jpg'],
+  'For sale: 2020 Datsun GO+ 7 seater, available as a runner. This vehicle is in good working condition, requiring only some cosmetic attention to the body. Offering at Conti Spares. Dont miss out on this opportunity!. Perfect for everyday use or as a reliable budget car.Visit us at Conti Spares, 18 Sydney Road, to view the vehicle.Contact us today for more details or to arrange a test drive. Don’t miss this deal! '
+)">
+        <img src="https://i.ibb.co/YhkkW8N/datsungo-redcover.jpg" alt=" Datsun Go + (2020)">
+        <h3>Datsun Go + (2020)</h3>
+        <p><strong>Status:</strong> <span style="color: red; font-weight: bold;">Sold!</span></p>
+      </div>
+      <div class="product-card" onclick="showProductDetails('Detailed info about Datsun Go', ['https://i.ibb.co/S5Dxxy2/whitedg1.jpg', 'https://i.ibb.co/M68gvZ2/whitedg2.jpg','https://i.ibb.co/qx4CLTR/whitedg3.jpg'],
+  'Datsun Go for Sale Runner. Selling a Datsun Go in good running condition. Perfect for everyday use or as a reliable budget car.Visit us at Conti Spares, 18 Sydney Road, to view the vehicle.Contact us today for more details or to arrange a test drive. Don’t miss this deal! '
+)">
+        <img src="https://i.ibb.co/R3MBC3y/whitedgruncover.jpg" alt=" Datsun Go">
+        <h3>Datsun Go</h3>
+        <p><strong>Status:</strong> <span style="color: red; font-weight: bold;">Sold!</span></p>
+      </div>
+      <div class="product-card" onclick="showProductDetails('Detailed info about Hyundai I10', ['https://i.ibb.co/TrbtYG1/hi101.jpg', 'https://i.ibb.co/G7YgHND/hi102.jpg','https://i.ibb.co/Dr6gdVV/hi103.jpg'],
+  'We are stripping a Hyundai i10 for spares at Conti Spares. All parts are in good condition and ready for sale. Visit us at 18 Sydney Road to find the parts you need. Stock is selling fast, so don’t miss out!Contact us today to check availability. Quality spares at affordable prices! '
+)">
+        <img src="https://i.ibb.co/2SwjQ3x/IMG-20241120-WA0044.jpg" alt="Hyundai i10">
+        <h3>Hyundai I10</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+
+      <div class="product-card" onclick="showProductDetails('Detailed info about Renault Kwid Climber', ['https://i.ibb.co/SwkW0wD/climber1.jpg', 'https://i.ibb.co/qRmdQfx/climber2.jpg','https://i.ibb.co/6vSxCZY/climber3.jpg'],
+  'We are stripping a Renault Kwid Climber for spares at Conti Spares. Get high-quality used parts at affordable prices. Visit us at 18 Sydney Road to find the parts you need. Don’t miss out – stock is limited and selling fast! '
+)">
+        <img src="https://i.ibb.co/MMKCv8H/climber.jpg" alt="Renault Kwid Climber">
+        <h3>Renault Kwid Climber</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+      <div class="product-card" onclick="showProductDetails('Detailed info about Datsun Go', ['https://i.ibb.co/9sjQ9SX/greydat1.jpg', 'https://i.ibb.co/QDdRvCH/greydat2.jpg','https://i.ibb.co/9T76W0Z/greydat3.jpg'],
+  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
+)">
+        <img src="https://i.ibb.co/KyZRvFP/IMG-20241120-WA0047.jpg" alt="Datsun Go">
+        <h3>Datsun Go</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+      <div class="product-card" onclick="showProductDetails('Detailed info about Datsun Go', ['https://i.ibb.co/Tqz0php/datsungp1.jpg', 'https://i.ibb.co/jWPDMXZ/datsungp2.jpg','https://i.ibb.co/jDD9Qmc/datsungp3.jpg'],
+  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
+)">
+        <img src="https://i.ibb.co/Sm0v0q6/IMG-20241120-WA0048.jpg" alt="Datsun Go">
+        <h3>Datsun Go</h3>
+        <p>Status: Stripping for parts</p>
+      </div>
+      <div class="product-card" onclick="showProductDetails('Detailed info about Renault Kwid', ['https://i.ibb.co/f1WYSQK/kwid1.jpg', 'https://i.ibb.co/pv9v665/kwid2.jpg','https://i.ibb.co/4Z3wn8j/kwid3.jpg'],
+  'We’re stripping a Renault Kwid for parts at Conti Spares! Need something specific? From engine parts to body panels and interiors, we’ve got what you’re looking for to keep your Kwid running smoothly. '
+)">
+        <img src="https://i.ibb.co/jTfQn5N/IMG-20241120-WA0049.jpg" alt="Renault Kwid">
+        <h3>Renault Kwid</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+      <div class="product-card" onclick="showProductDetails('Detailed info about Honda Civic Sedan', ['https://i.ibb.co/CVgSKTx/honda1.jpg', 'https://i.ibb.co/yk6RjkV/honda2.jpg','https://i.ibb.co/wMRpMCC/honda3.jpg'],
+  'For Sale: Honda Civic Sedan Parts at Conti Spares! We are currently stripping a Honda Civic Sedan for parts. Whether you need body panels, interior parts, or any specific spare parts, we have a variety of quality items available.Location: Conti Spares, 18 Sydney Road.Reach out for pricing and availability of parts. Get top-quality Honda Civic spares at affordable prices!'
+)">
+        <img src="https://via.placeholder.com/300x200" alt="Honda Civic">
+        <h3>Honda Civic Sedan</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+      <div class="product-card" onclick="showProductDetails('Detailed info about Hyundai I10', ['https://i.ibb.co/cFc7hgZ/i103.jpg', 'https://i.ibb.co/YRs1krF/i102.jpg','https://i.ibb.co/Mck1PzZ/i101.jpg'],
+  'Looking for Hyundai i10 spares? Conti Spares has a full range of quality parts in stock, ready for you! '
+)">
+        <img src="https://i.ibb.co/3cs9n98/oldi10.jpg" alt="Hyundai i10">
+        <h3>Hyundai I10</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+      <div class="product-card" onclick="showProductDetails('Detailed info about Opel Corsa', ['https://i.ibb.co/85WNMBj/opel3.jpg', 'https://i.ibb.co/NKwvvYz/opel2.jpg','https://i.ibb.co/D9nPKfx/opel1.jpg'],
+  'Need Opel Corsa spares? Conti Spares offers a wide range of top-quality parts to keep your vehicle running smoothly. '
+)">
+        <img src="https://via.placeholder.com/300x200" alt="Opel Corsa">
+        <h3>Opel Corsa</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+     <div class="product-card" onclick="showProductDetails('Detailed info about Datsun Go', ['https://i.ibb.co/FzFkck8/wdold1.jpg', 'https://i.ibb.co/vHBrtGs/wdold2.jpg','https://i.ibb.co/ZXC839j/wdold3.jpg'],
+  'The Datsun Go is available for parts and full sales. Condition: Non-Runner, Stripping a 2015 Datsun GO for parts! We have a full range of parts available, including engine components, body panels, interior items, and more. Located at 18 Sydney Road, we new and used parts to keep your cars running smoothly. Get in touch for availability and pricing on the parts you need. Don’t miss out on this opportunity for affordable, reliable spares! '
+)">
+        <img src="https://i.ibb.co/KqWZ4Bj/datsungo1.jpg" alt="Datsun Go">
+        <h3>Datsun Go</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+     <div class="product-card" onclick="showProductDetails(
+  'Detailed info about Mercedes-Benz B180', 
+  [
+    'https://i.ibb.co/MPPJPrh/b180-1.jpg', 
+    'https://i.ibb.co/HtgcY1F/b180-2.jpg',
+    'https://i.ibb.co/k8HNTW3/b180-3.jpg',
+    'https://i.ibb.co/8gFrMYv/benz-4.jpg',
+    'https://i.ibb.co/Z1hyJSd/benz-5.jpg'
+  ],
+'Searching for Mercedes B180 spares? Conti Spares has exactly what you need! Premium parts at affordable prices, ready for you.Get in touch with us today.Dont wait call now and secure your Mercedes spares!'
+)">
+    <img src="https://i.ibb.co/sqgWd4w/mercedes-B180.jpg" alt="Mercedes-Benz B180">
+    <h3>Mercedes-Benz B180</h3>
+    <p><strong>Status:</strong> Stripping for parts</p>
+</div>
+
+     <div class="product-card" onclick="showProductDetails('Detailed info about Nissan Almera', ['https://i.ibb.co/1L8Y7BD/al1.jpg', 'https://i.ibb.co/TPZbbZk/al2.jpg','https://i.ibb.co/K0d1fCM/al3.jpg'],
+  'Looking for Nissan Almera spares? Conti Spares has everything you need at competitive prices! '
+)">
+        <img src="https://i.ibb.co/StVn39J/almera.jpg" alt="Nissan Almera">
+        <h3>Nissan Almera</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+      <div class="product-card" onclick="showProductDetails('Detailed info about Chevrolet Cruze', ['https://i.ibb.co/XpsMQ4L/cruze1.jpg', 'https://i.ibb.co/1zztqxk/cruze2.jpg','https://i.ibb.co/vQF0sgk/cruze3.jpg'],
+  'In need of Chevrolet Cruze spares? Look no further! Conti Spares offers a wide range of quality parts for your vehicle. '
+)">
+        <img src="https://i.ibb.co/SfpqztB/cruze.jpg" alt="Chevrolet Cruze">
+        <h3>Chevrolet Cruze</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+      <div class="product-card" onclick="showProductDetails('Detailed info about Ford Focus ST', ['https://i.ibb.co/hc4RZs9/st1.jpg', 'https://i.ibb.co/dPvDpq1/st2.jpg','https://i.ibb.co/7rzW0dG/st3.jpg'],
+  'In need of Ford ST spares? Look no further than Conti Spares for top-quality used parts! '
+)">
+        <img src="https://i.ibb.co/9qVxsNK/focus-st-3.jpg" alt="Ford Focus ST">
+        <h3>Ford Focus ST</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+     <div class="product-card" onclick="showProductDetails('Detailed info about BMW 320i', ['https://i.ibb.co/ySNp9kF/w1.jpg', 'https://i.ibb.co/HTRBL2y/w2.jpg','https://i.ibb.co/j4ZBm23/w3.jpg','https://i.ibb.co/hM5mzPx/w4.jpg'],
+  'Looking for BMW 320i spares? Conti Spares has a complete BMW 320i available for stripping! '
+)">
+        <img src="https://i.ibb.co/58jc6wP/BMW320-I-4.jpg" alt="BMW 320i">
+        <h3>BMW 320i</h3>
+        <p><strong>Status:</strong> Stripping for parts</p>
+      </div>
+      <div id="productModal" class="modal">
+        <div class="modal-content">
+          <span class="close-button" onclick="closeModal()">&times;</span>
+          <div id="modalDetails"></div>
+        </div>
+      </div>
+    
+      <div id="pagination" class="pagination"></div>
+  </section>
+
+<!-- Individual Products Section -->
+<section class="individual-products-section">
+    <h2>Individual Products for Sale</h2>
+    <div class="individual-product-container">
+        <div class="individual-product-card" onclick="showProductDetails('Detailed info about I20 Manual Gearbox', ['https://i.ibb.co/y8Zx1km/i20gearbox1.jpg','https://i.ibb.co/vdNy20g/I20gearbox2.jpg','https://i.ibb.co/d7fmD4f/I20gearbox3.jpg','https://i.ibb.co/CQML7b3/I20gearbox4.jpg'], 'Selling a second hand Gearbox Model BA 1.2 G4LA. Contact us for details. R5,000.')">
+    <img src="https://i.ibb.co/y8Zx1km/i20gearbox1.jpg" alt="I20 Manual Gearbox">
+    <h3>I20 Manual Gearbox</h3>
+    <p><strong>Status:</strong> Available</p>
+    <p><strong>Price:</strong> R5,000</p> 
+  </div>
+     
+        <div class="individual-product-card" onclick="showProductDetails('Detailed info about Etios RHS Tail-lamp', ['https://i.ibb.co/7gWpmpg/etiosrhstaillamp.jpg'], 'Selling a Etios RHS Tail-lamp. Condition is good and ready to install. Contact us today for more details!')">
+            <img src="https://i.ibb.co/7gWpmpg/etiosrhstaillamp.jpg" alt="RHS Tail-lamp">
+            <h3>Etios RHS Tail-lamp</h3>
+            <p><strong>Status:</strong> Available</p>
+            <p><strong>Price:</strong> R600</p>
+        </div>
+      
+       <div class="individual-product-card" onclick="showProductDetails('Detailed info about Etios LHS Tail-lamp', ['https://i.ibb.co/26fSHy7/etioslhstaillamp.jpg'], 'Selling a Etios LHS Tail-lamp. Condition is okay and ready to install. Contact us today for more details!')">
+            <img src="https://i.ibb.co/26fSHy7/etioslhstaillamp.jpg" alt="LHS Tail-lamp">
+            <h3>Etios LHS Tail-lamp</h3>
+            <p><strong>Status:</strong> Available</p>
+            <p><strong>Price:</strong> R500</p>
+        </div>
+        
+     
+    </div>
+</section>
+
+<!-- Product Modal -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="closeModal()">&times;</span>
+        <div id="modalDetails"></div>
+    </div>
+</div>
+
+
+<footer class="footer">
+  <div class="footer-content">
+    <h2>Your Source for Second Hand Cars and Quality Second Hand Parts</h2>
+    <p>© 2024 CONTI SPARES. All rights reserved.</p>
+    <div class="developer-info">
+      <p>Developed by <a href="https://www.linkedin.com/in/muhammed-azhar-syed-1bb0742b7/" target="_blank" rel="noopener noreferrer">Muhammed Azhar</a></p>
+      <a href="https://www.linkedin.com/in/muhammed-azhar-syed-1bb0742b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" class="linkedin-icon">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Initialize pagination on DOM content loaded
+document.addEventListener("DOMContentLoaded", function() {
+      paginateProducts(); // Initialize pagination
+    });
+
+ function paginateProducts() {
+    const products = document.querySelectorAll(".product-card");
+    const perPage = 6; // Number of products per page
+    const totalPages = Math.ceil(products.length / perPage);
+    const pagination = document.getElementById("pagination");
+    pagination.innerHTML = ""; // Clear previous pagination
+
+    for (let i = 1; i <= totalPages; i++) {
+        const button = document.createElement("button");
+        button.textContent = i;
+        button.classList.add("pagination-button");
+        button.onclick = () => showPage(i, perPage); // Attach click event
+        pagination.appendChild(button);
+    }
+    
+    showPage(1, perPage); // Show the first page by default
+}
+
+
+ function showPage(page, perPage) {
+    const products = document.querySelectorAll(".product-card");
+    products.forEach((product, index) => {
+        product.style.display =
+            index >= (page - 1) * perPage && index < page * perPage ? "block" : "none";
+    });
+
+    // Scroll to the top of the products section only during pagination click
+    const productsSection = document.querySelector(".products");
+    productsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    // Update active pagination button
+    const buttons = document.querySelectorAll(".pagination-button");
+    buttons.forEach((button, index) => {
+        button.classList.toggle("active", index + 1 === page);
+    });
+}
+
+
+
+
+    function searchProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const products = document.querySelectorAll(".product-card");
+      products.forEach((product) => {
+        const productName = product.querySelector("h3").textContent.toLowerCase();
+        product.style.display = productName.includes(input) ? "block" : "none";
+      });
+    }
+
+    
+  function showProductDetails(productName, images, description) {
+    const modal = document.getElementById("productModal");
+    const modalDetails = document.getElementById("modalDetails");
+
+    // Ensure images is an array and not empty
+    if (!images || images.length === 0) {
+        alert("No images available for this product.");
+        return;
+    }
+
+    // Create image gallery HTML
+    const imageGallery = images.map(img => `
+        <img src="${img}" alt="${productName}" style="max-width: 100%; margin: 5px;">
+    `).join("");
+
+    // Set modal content
+    modalDetails.innerHTML = `
+        <h2>${productName}</h2>
+        <div>${imageGallery}</div>
+        <p>${description}</p>
+        <button onclick="closeModal()">Close</button>
+    `;
+    
+    // Display modal
+    modal.style.display = "flex";
+
+    // Disable background scrolling
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    const modal = document.getElementById("productModal");
+    modal.style.display = "none";
+
+    // Re-enable background scrolling
+    document.body.style.overflow = 'auto';
+}
+    
+    document.getElementById("searchInput").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault(); // Prevent default form submission
+    searchProducts(); // Call your search function
+  }
+});
+
+ 
+</script>
+
+</body>
+</html>
