@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Added lang attribute for accessibility -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find high-quality new and used car spare parts, cheap cars at Conti Spares. Affordable prices and wide selection.">
+  <meta property="og:title" content="Contispares - Quality Car Spares in Durban for Leading Car Brands">
+  <meta property="og:description" content="Shop a wide range of car spares for top brands at Contispares, Durban’s trusted auto parts store. Quality parts, fast delivery, and excellent service.">
+  <meta property="og:image" content="https://www.contispares.co.za/Logo.png">
+  <meta property="og:url" content="https://www.contispares.co.za">
+  <meta property="og:type" content="website">
+  
+  <title>Buy Cheap and Quality Car Spare Parts at Conti Spares</title>
+  <link rel="icon" href="img/icon.png" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #676767;
+      line-height: 1.6;
+    }
+
+   header {
+      text-align: center;
+      padding: 10px;
+      background-color: #000000;
+      border-bottom: 1px solid #ff0000;
+    }
+
+
+    header .logo img {
+    max-width: 500px; /* Match logo size to first page */
+    height: auto; /* Keep aspect ratio */
+}
+
+
+    nav {
+      background-color: #ff0000;
+      padding: 20px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center; /* Center navigation links */
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-weight: 600;
+      font-size: 30px; /* Font size for desktop views */
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffffff;
+      text-shadow: 1px 1px 2px #000000; /* Added text shadow for depth */
+    }
+   /* Featured Brands */
+   .brands {
+      text-align: center;
+      padding: 20px;
+      background-color: #ff0000;
+    }
+
+    .brands h2 {
+      font-size: 28px;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .brands {
+      background-color: #676767;
+      padding: 20px;
+    }
+
+    .brands-container img {
+      width: 150px;
+      height: 80px;
+      object-fit: contain; /* Ensures proper scaling without distortion */
+      margin: 10px; /* Optional: Adds spacing between images */
+      display: inline-block; /* Keeps images inline */
+    }
+
+    footer {
+      background-color: #000000;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 15px;
+    }
+
+    footer a {
+      color: #2d6fff;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Media queries for responsiveness for non-desktop devices */
+    @media (max-width: 768px) {
+      header .logo img {
+        max-width: 90%; /* Responsive logo for smaller screens */
+      }
+
+      nav ul li a {
+        font-size: 20px; /* Adjust font size for navigation on mobile */
+      }
+      .brands-container {
+        display: flex;
+        flex-wrap: wrap; /* Allow brands to wrap on smaller screens */
+        justify-content: center; /* Center align brands */
+      }
+
+      .brands-container img {
+        width: 80px; /* Adjust brand logo sizes on mobile */
+        height: auto; /* Maintain aspect ratio */
+      }
+    }
+    .contact-us {
+    padding: 40px;
+    background-color: #676767;
+    text-align: center;
+}
+
+.contact-us h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #ff0000;
+}
+
+.contact-us h3 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.contact-cards {
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center align cards */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 20px; /* Space between cards */
+}
+
+.contact-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ff0000;
+    border-radius: 10px;
+    padding: 20px; /* Card padding */
+    margin: 10px; /* Space around cards */
+    flex: 1 1 250px; /* Allow cards to grow and shrink */
+    max-width: 300px; /* Prevent cards from exceeding this width */
+}
+
+.contact-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-card a {
+    display: block; /* Each link on a new line */
+    color: #007bff; /* Primary link color */
+    text-decoration: none; /* Remove underline */
+    margin: 5px 0; /* Margin between links */
+    font-size: 25px;
+}
+
+@media (max-width: 768px) {
+    .contact-card {
+        flex: 1 1 100%; /* Stack cards full-width on small screens */
+    }
+}
+
+.office-hours {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+.office-hours p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px; /* You can repeat common styles */
+}
+
+strong {
+    min-width: 100px; /* Minimum width for strong elements */
+}
+
+.time {
+    flex-grow: 1;
+    text-align: right;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+          <img src="https://i.ibb.co/DgLP5Fq/logo.png" alt="ContiSpares Logo">
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+
+<!-- Contact Us Section -->
+<section class="contact-us" id="contact-us">
+  <h2>Contact Us</h2>
+  <h3>We'd love to hear from you! </h3>
+
+  <div class="contact-cards">
+ <div class="contact-card">
+  <h3>Call Us Now!</h3>
+  <div>
+    <a href="tel:27767802386"><i class="fas fa-phone" style="color: blue;"></i> +27 76 780 2386</a>
+    <a href="tel:27828151732"><i class="fas fa-phone" style="color: green;"></i> +27 82 815 1732</a>
+  </div>
+</div>
+
+  <div class="contact-card">
+    <h3>Find Us Here!</h3>
+    <p><a href="https://www.google.com/maps?q=18 Sydney Rd Greyville, Berea, 4001" target="_blank">18 Sydney Rd Greyville, Berea, 4001</a></p>
+    
+    <div class="map-container">
+      
+      <iframe src="https://www.google.com/maps/embed/v1/place?q=Conti+Spares&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" style="border:0" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+
+<div class="contact-card">
+    <h3>Check Out Our Social Media</h3>
+    <div class="social-media-links">
+      <a href="https://www.facebook.com/profile.php?id=61565620319486" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook-f"></i> <!-- Font Awesome Facebook Icon -->
+      </a>
+      <a href="https://www.instagram.com/conti.spares/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i> <!-- Font Awesome Instagram Icon -->
+      </a>
+       <a href="https://www.tiktok.com/@conti.spares" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-tiktok"></i> <!-- Font Awesome TikTok Icon -->
+        </a>
+    </div>
+  </div>
+
+  
+<div class="contact-card">
+  <h3>Office Hours:</h3>
+  <div class="office-hours">
+    <p><strong>Monday:</strong>    <span class="time">8:30am - 4:30pm</span></p>
+    <p><strong>Tuesday:</strong>   <span class="time">8:30am - 4:30pm</span></p>
+    <p><strong>Wednesday:</strong> <span class="time">8:30am - 4:30pm</span></p>
+    <p><strong>Thursday:</strong>  <span class="time">8:30am - 4:30pm</span></p>
+    <p><strong>Friday:</strong>    <span class="time">8:30am - 4:30pm</span></p>
+    <p><strong>Saturday:</strong>  <span class="time">8:30am - 1:00pm</span></p>
+    <p><strong>Sunday:</strong>    <span class="time">Closed</span></p>
+  </div>
+</div>
+</div>
+
+
+
+</section>
+  
+  <!-- Featured Brands -->
+  <section class="brands">
+    <h2>Our Main Brands</h2>
+    <div class="brands-container">
+      <img src="https://i.ibb.co/XYdfKsX/5ec3e1ee58550c0004427739.png" alt="Brand 1">
+      <img src="https://i.ibb.co/LP6kZ9t/62015ceb40d2700004f23850.png" alt="Brand 2">
+      <img src="https://i.ibb.co/HGvYdZy/580b57fcd9996e24bc43c49c.png" alt="Brand 3">
+      <img src="https://i.ibb.co/dkKhqbk/580b57fcd9996e24bc43c497.png" alt="Brand 4">
+      <img src="https://i.ibb.co/zZ9g3w9/5ec3e2db58550c0004427740.png" alt="Brand 5">
+      <img src="https://i.ibb.co/GdcPFm9/5ec3e30358550c0004427741.png" alt="Brand 6">
+      <img src="https://i.ibb.co/RT7pWNp/580b57fcd9996e24bc43c482.png" alt="Brand 7">
+      <img src="https://i.ibb.co/M2JBvrJ/5ec3e3f358550c0004427748.png" alt="Brand 8">
+      <img src="https://i.ibb.co/NT2XsBq/gwm-seeklogo.png" alt="Brand 9">
+      <img src="https://i.ibb.co/F8NkH0C/kisspng-datsun-510-car-datsun-redi-go-nissan-infiniti-war-5b1509d53ffa80-7431001715281054292621.png" alt="Brand 10">
+      <img src="https://i.ibb.co/StPVtMk/580b57fcd9996e24bc43c479.png" alt="Brand 11">
+      <img src="https://i.ibb.co/qBMbzRQ/BMW.png" alt="Brand 12">
+      <img src="https://i.ibb.co/kK2kn21/580b57fcd9996e24bc43c47c.png" alt="Brand 13">
+      <img src="https://i.ibb.co/9Z8HyM2/580b57fcd9996e24bc43c4a5.png" alt="Brand 14"> 
+      <img src="https://i.ibb.co/KxNkdHH/580b57fcd9996e24bc43c499.png" alt="Brand 15">
+      <img src="https://i.ibb.co/R7r9zVY/5ec3e46558550c000442774b.png" alt="Brand 16">
+      <img src="https://i.ibb.co/L6Wvqyk/580b57fcd9996e24bc43c47a.png" alt="Brand 17">
+      <img src="https://i.ibb.co/51V0jyB/580b585b2edbce24c47b2c5e.png" alt="Brand 18">
+      <img src="https://i.ibb.co/dJ3xbYV/580b57fcd9996e24bc43c488.png" alt="Brand 19">
+      <img src="https://i.ibb.co/zf9tcxd/638e307b3eae41f3706b4076.png" alt="Brand 20">
+      <img src="https://i.ibb.co/FXB38Dz/5ec3e25258550c000442773c.png" alt="Brand 21">
+      <img src="https://i.ibb.co/hm4MsJ8/58482340cef1014c0b5e49bf.png" alt="Brand 22">
+    </div>
+  </section>
+  
+    <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal()">&times;</span>
+      <div id="modalDetails"></div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-content">
+      <h2>Your Source for Second Hand Cars and Quality Second Hand Parts</h2>
+    <p>© 2024 CONTI SPARES. All rights reserved.</p>
+    <div class="developer-info">
+      <p>Developed by <a href="https://www.linkedin.com/in/muhammed-azhar-syed-1bb0742b7/" target="_blank" rel="noopener noreferrer">Muhammed Azhar</a></p>
+      <a href="https://www.linkedin.com/in/muhammed-azhar-syed-1bb0742b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" class="linkedin-icon">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- JavaScript for Form -->
+  <script>
+    
+    // Add this event listener to handle form submission
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Gather form data
+    const firstName = document.getElementById("firstName").value;
+    const surname = document.getElementById("surname").value;
+    const phoneNumber = document.getElementById("phoneNumber").value;
+    const email = document.getElementById("email").value;
+    const vehicle = document.getElementById("vehicleMakeModel").value;
+    const year = document.getElementById("carYear").value;
+    const partsRequired = document.getElementById("vehiclePart").value;
+
+    // Construct the message to be sent via WhatsApp
+    const message = `Hello Conti Spares, I am interested in car parts. Here are my details:\n\n` +
+                    `*Name:* ${firstName} ${surname}\n` +
+                    `*Phone Number:* ${phoneNumber}\n` +
+                    `*Email:* ${email}\n` +
+                    `*Vehicle:* ${vehicle} (${year})\n` +
+                    `*Parts Required:* ${partsRequired}`;
+
+    // Replace "<YOUR_PHONE_NUMBER>" with your actual WhatsApp number in international format
+    const whatsappNumber = "27642152212"; // e.g., "27767802386"
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
+
+    // Redirect to WhatsApp
+    window.open(whatsappUrl, '_blank');
+});
+
+    // Initialize pagination on DOM content loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      paginateProducts(); // Initialize pagination
+    });
+
+ function paginateProducts() {
+    const products = document.querySelectorAll(".product-card");
+    const perPage = 6; // Number of products per page
+    const totalPages = Math.ceil(products.length / perPage);
+    const pagination = document.getElementById("pagination");
+    pagination.innerHTML = ""; // Clear previous pagination
+
+    for (let i = 1; i <= totalPages; i++) {
+        const button = document.createElement("button");
+        button.textContent = i;
+        button.classList.add("pagination-button");
+        button.onclick = () => showPage(i, perPage); // Attach click event
+        pagination.appendChild(button);
+    }
+    
+    showPage(1, perPage); // Show the first page by default
+}
+
+
+ function showPage(page, perPage) {
+    const products = document.querySelectorAll(".product-card");
+    products.forEach((product, index) => {
+        product.style.display =
+            index >= (page - 1) * perPage && index < page * perPage ? "block" : "none";
+    });
+
+    // Scroll to the top of the products section only during pagination click
+    const productsSection = document.querySelector(".products");
+    productsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    // Update active pagination button
+    const buttons = document.querySelectorAll(".pagination-button");
+    buttons.forEach((button, index) => {
+        button.classList.toggle("active", index + 1 === page);
+    });
+}
+
+
+
+
+    function searchProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const products = document.querySelectorAll(".product-card");
+      products.forEach((product) => {
+        const productName = product.querySelector("h3").textContent.toLowerCase();
+        product.style.display = productName.includes(input) ? "block" : "none";
+      });
+    }
+
+    
+  function showProductDetails(productName, images, description) {
+    const modal = document.getElementById("productModal");
+    const modalDetails = document.getElementById("modalDetails");
+
+    // Ensure images is an array and not empty
+    if (!images || images.length === 0) {
+        alert("No images available for this product.");
+        return;
+    }
+
+    // Create image gallery HTML
+    const imageGallery = images.map(img => `
+        <img src="${img}" alt="${productName}" style="max-width: 100%; margin: 5px;">
+    `).join("");
+
+    // Set modal content
+    modalDetails.innerHTML = `
+        <h2>${productName}</h2>
+        <div>${imageGallery}</div>
+        <p>${description}</p>
+        <button onclick="closeModal()">Close</button>
+    `;
+    
+    // Display modal
+    modal.style.display = "flex";
+
+    // Disable background scrolling
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    const modal = document.getElementById("productModal");
+    modal.style.display = "none";
+
+    // Re-enable background scrolling
+    document.body.style.overflow = 'auto';
+}
+    
+    document.getElementById("searchInput").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault(); // Prevent default form submission
+    searchProducts(); // Call your search function
+  }
+});
+
+ 
+// Redirect to Google Reviews function
+function redirectToGoogleReviews() {
+    const googleReviewUrl = "https://search.google.com/local/writereview?placeid=ChIJbVM_Ozup9x4R8cAK5F16Fr8"; // Replace with your actual Place ID
+    window.open(googleReviewUrl, '_blank');
+}
+
+
+  </script>
+</body>
+
+</html>
